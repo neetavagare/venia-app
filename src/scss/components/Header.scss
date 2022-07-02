@@ -1,0 +1,62 @@
+@import "../partials/variables";
+@import '../common/layout.scss';
+@import '../common/mixin.scss';
+
+.headerborder {
+    @include headfootborder;
+    padding-bottom: 10px;
+}
+
+.venia {
+    width: 58%;
+}
+//  Header Labels sass
+.header_text {
+    font-family: Mulish;
+    padding-top: 30px;
+    font-size: 16px;
+
+    .text1 {
+        @include texts;
+        text-align: left;
+
+    }
+
+    .text2 {
+        @include texts
+    }
+
+    .text3 {
+        @include texts
+    }
+
+    .text4 {
+        @include texts
+    }
+}
+
+.header_icons {
+    font-family: Mulish;
+    text-align: end;
+    padding-top: 20px;
+
+    .text5 {
+        @include textss;
+    }
+
+    .text6 {
+        @include textss;
+    }
+}
+
+.cart-count {
+    width: 20px;
+    position: absolute;
+    background: blue;
+    height: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    margin-top: -5px;
+    margin-left: 1px;
+}

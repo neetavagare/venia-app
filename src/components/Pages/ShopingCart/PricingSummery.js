@@ -1,0 +1,41 @@
+import React from "react";
+import { HeaderIcons } from "../../../config/Constant";
+import Icon from "../../atoms/Icon/Icon";
+import ppbtn from '../../../images/Product_Images/ppbtn.png';
+
+ // Pricing Summery Component and it's working.
+
+export default function PricingSummery(props) {
+    return (
+        <React.Fragment>
+            <div className="aem-Grid aem-Grid--12 ">
+                <h2 className="pricingtext">Pricing Summery</h2>
+                <div className="aem-GridColumn aem-GridColumn--default--6">
+                    <div className="subtotal">Subtotal</div>
+                    <div className="coupen">Coupen</div>
+                    <div className="gift">Gift Card</div>
+                    <div className="tax">Estimated tax</div>
+                    <div className="shhipping">Estimated shipping</div>
+                    <div className="total">Estimated Total</div>
+                </div>
+                <div className="aem-GridColumn aem-GridColumn--default--6 pricing ">
+                    <div className="subtotal">${props.totalPrice ? (props.totalPrice - 5) : 0}</div>
+                    <div className="coupen">0</div>
+                    <div className="gift">${props.totalPrice ? 5 : 0}</div>
+                    <div className="tax">0</div>
+                    <div className="shhipping">FREE</div>
+                    <div className="total">${props.totalPrice}</div>
+                </div>
+            </div>
+            <div className="aem-Grid aem-Grid--12 btnicon">
+                <div>
+                    <Icon name="lock"> </Icon>
+                    checkout
+                </div>
+            </div>
+            <div className="aem-Grid aem-Grid--12" >
+                <img src={ppbtn} className="paypalbtn" />
+            </div>
+        </React.Fragment>
+    )
+}

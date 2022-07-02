@@ -1,0 +1,141 @@
+@import './mixin.scss';
+
+.container {
+    @include layout;
+}
+
+.boximage {
+    display: block;
+}
+
+.mobileHide {
+    display: block;
+}
+
+.image {
+    display: block;
+}
+
+.button {
+    display: block;
+}
+
+.deskTopHide {
+    display: none;
+}
+
+.mobileHideInline {
+    display: inline;
+}
+
+/* Phone Breakpine*/
+@media (max-width: 768px) {
+
+    // body{
+    //     margin: 0;
+    // }
+    .container {
+        padding: 0px 0px;
+        margin: 0px;
+    }
+
+    .estimate {
+        width: 100% !important;
+    }
+
+    .mobileHide {
+        display: none;
+    }
+
+    .deskTopHide {
+        display: block;
+    }
+
+    .mobileheader {
+        @include headfootborder;
+
+        .mobileIcon {
+            margin-top: 10px;
+        }
+
+        .menu {
+            padding-top: 17px;
+            padding-left: 10px;
+        }
+
+        .searchIcon {
+            padding-top: 20px;
+        }
+
+        .searchI {
+            margin-right: 25px;
+        }
+
+    }
+
+    .image {
+        height: 120px;
+        width: 100%;
+    }
+
+    .button {
+        margin-right: 30px;
+        float: right;
+        padding: 0px !important;
+    }
+
+    .mobileHideInline {
+        display: none;
+    }
+
+    .Productdetails {
+        .detailimage {
+            width: 100% !important;
+        }
+    }
+
+    .results {
+        @include ptitle;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .incrementbtn {
+        margin-left: 90px;
+    }
+
+    .addbtn {
+        margin-left: 42px;
+    }
+
+    .svgIcon {
+        padding-left: 47px;
+    }
+
+    .mobile-text-align-center {
+        text-align: center;
+    }
+
+    .precaution {
+        padding-left: 168px !important;
+    }
+
+    .sectionender {
+        background-color: $primary-brand;
+        margin-top: 40px;
+        margin-left: 153px;
+        height: 8px;
+        width: 102px;
+    }
+
+    .dotborder {
+        margin-right: 124px;
+        border-bottom: 7px solid #1F39FF;
+        margin-bottom: 20px;
+        margin-left: 132px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+}

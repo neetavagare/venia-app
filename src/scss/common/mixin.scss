@@ -1,0 +1,130 @@
+// Header mixin
+
+
+@mixin layout {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+@mixin headfootborder {
+    border-bottom: 1px solid $greyL2-color;
+}
+
+@mixin floatright {
+    float: right;
+}
+
+@mixin texts {
+    padding-right: 15px;
+    font-size: 16px;
+    font-family: Mulish;
+    color: $header-color;
+}
+
+@mixin textss {
+    padding-left: 10px;
+    text-align: center;
+    font-size: 16px;
+    padding-right: 25px;
+}
+
+@mixin size {
+    font-size: 16px;
+}
+
+@mixin headingsize {
+    margin: 0px;
+    padding: 10px 0px;
+    font-family: Source Sans Pro, Semibold;
+    color: $unnamed-color;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+@mixin ptitle {
+    font-family: Mulish;
+    color: $unnamed-color;
+}
+
+@mixin shipping {
+    padding: 24px;
+    font-size: 20px;
+}
+
+@mixin estimateborder{
+    border-bottom: 1px solid $border-color;
+}
+
+@mixin summery {
+    padding: 27.5px;
+    font-size: 14px;
+}
+
+@mixin footer_titles {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: Mulish, semiBold;
+    color: $unnamed-color;
+}
+
+@mixin text {
+    font-size: 16px;
+    font-family: Mulish;
+    color: $unnamed-color;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+@mixin footer_icon {
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+@mixin filterborder {
+    margin-top: 20px;
+    margin-right: 45px;
+    border-top: 2px solid $grey-M1-color;
+}
+
+@mixin pricingpadding {
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+@mixin footersizing {
+    font-size: 14px;
+    text-decoration: underline 0.5px solid $unnamed-color;
+    float: right;
+    padding-top: 15px;
+}
+
+@mixin detailborder {
+    border-top: 1px solid $greyL2-color;
+}
+
+@mixin radius {
+    border-radius: 5px;
+    width: 15%;
+    margin-right: 15px;
+}
+
+@mixin saveshare {
+    padding-right: 17px;
+    padding-left: 10px;
+}
+
+@mixin peekbagtitle {
+    margin: 0px;
+    padding-top: 10px;
+    font-family: Source Sans Pro, Semibold;
+    font-size: 36px;
+    color: $unnamed-color;
+}
+
+@mixin productcatagories{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Mulish;
+    color: $greyD2-color;
+}

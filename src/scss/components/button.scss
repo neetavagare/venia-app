@@ -1,0 +1,11 @@
+@import '../partials/variables';
+@import '../common/mixin.scss';
+
+
+.btn1 {
+    border: 2px solid $greyL2-color;
+    border-radius: 8px;
+    padding: 10px 40px;
+    background-color: $white-color;
+    margin: 0 10px;
+}

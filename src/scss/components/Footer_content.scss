@@ -1,0 +1,70 @@
+@import '../common/mixin.scss';
+@import '../partials/variables';
+
+.footerborder{
+    border-top: 2px solid $greyL2-color;
+    margin-top: 80px;
+}
+
+.account {
+    @include footer_titles;
+}
+
+.about {
+    @include footer_titles;
+}
+
+.help {
+    @include footer_titles;
+}
+
+.follow {
+    @include footer_titles;
+}
+
+.ftext1{
+    @include text;
+}
+
+.ftext2{
+    @include text;
+}
+.ftext3{
+    @include text;
+}
+
+.ftext4{
+    @include text;
+}
+
+.ftext5{
+    @include text;
+}
+
+.ftext6{
+    @include text;
+}
+
+.ftext7{
+    @include text;
+}
+
+.ftext8{
+    @include text;
+}
+
+.ftext9{
+    @include text;
+}
+
+.ftext10{
+    @include text;
+}
+
+.ftext11{
+    @include text;
+}
+
+.ficon{
+    @include footer_icon;
+}

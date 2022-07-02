@@ -1,0 +1,215 @@
+@import '../partials/variables';
+@import '../common/mixin.scss';
+
+.Productdetails {
+
+    .catagary {
+        padding-top: 25px;
+
+        .catagory1 {
+            @include size;
+
+        }
+
+        .catagory2 {
+            @include size;
+        }
+
+        .catagory3 {
+            @include size;
+            color: $grey-dark;
+        }
+    }
+
+
+    .peekbag {
+        @include peekbagtitle;
+    }
+
+    .detailimage {
+        width: 60%;
+        text-align: center;
+    }
+
+    .starIcon {
+        padding-top: 10px;
+    }
+
+    .detailprice {
+        font-family: Mulish, SemiBold;
+        color: $unnamed-color;
+        font-size: 20px;
+    }
+
+    .loreamdetail {
+        @include ptitle;
+        @include headfootborder;
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .readmore,
+    a {
+        color: $unnamed-color;
+    }
+
+    .detailcolor {
+        @include ptitle;
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .swatch1 {
+        @include radius;
+        background-color: $darkBlue-color;
+    }
+
+    .swatch2 {
+        @include radius;
+        background-color: $darkPink-color;
+    }
+
+    .swatch3 {
+        @include radius;
+        background-color: $darkBlack-color;
+    }
+
+    .swatch4 {
+        @include radius;
+        background-color: $lightGrey;
+    }
+
+    .detailsize {
+        @include ptitle;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    .quantity {
+        @include ptitle;
+        font-size: 20px;
+        font-family: Mulish, SemiBold;
+        margin-bottom: 10px;
+    }
+
+    .quanrbtn {
+        border-radius: 8px;
+        width: 114px;
+        height: 36px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        background: white;
+    }
+
+    .addbtn {
+        background-color: $primary-brand;
+        border-radius: 28px;
+        color: $white-color;
+        width: 318px;
+        height: 40px;
+        text-align: center;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .saveIcon {
+        padding-left: 70px;
+    }
+
+    .saving {
+        @include saveshare;
+    }
+
+    .sharing {
+        @include saveshare;
+    }
+
+    .btn-background {
+        background: none;
+        border: none;
+    }
+
+    .Box {
+        width: 36px;
+        text-align: center;
+        height: 35px;
+        margin-top: 14px;
+        line-height: 34px;
+        border-radius: 8px;
+        border: 2px solid $grey-M1-color;
+        padding: 0 10px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 14px;
+    }
+}
+
+.productdescribe {
+    .hoodie {
+        @include peekbagtitle;
+        padding-bottom: 20px;
+    }
+
+    .describe {
+        @include ptitle;
+        font-size: 16px;
+    }
+
+    .description {
+        @include ptitle;
+        font-size: 20px;
+    }
+
+    .sectionender {
+        background-color: $primary-brand;
+        height: 8px;
+        width: 102px;
+    }
+}
+
+
+.detailing {
+    @include ptitle;
+    padding-top: 50px;
+
+    .content2 {
+        padding-top: 50px;
+    }
+
+    .precaution {
+        font-size: 20px;
+        padding-left: 45px;
+    }
+
+    .wicking {
+        font-size: 16px;
+    }
+
+    .fabric {
+        padding-top: 15px;
+        font-size: 16px;
+    }
+
+    .breath {
+        font-size: 16px;
+        padding-top: 15px;
+    }
+
+    .cotton {
+        padding-top: 15px;
+        font-size: 16px;
+    }
+
+    .swaetIcon1 {
+        margin-left: 40px;
+        width: 35%
+    }
+
+    .swaetIcon2 {
+        padding-top: 5px;
+        padding-left: 36px;
+        width: 36%;
+    }
+}

@@ -1,0 +1,88 @@
+@import '../partials//variables';
+@import '../common/mixin.scss';
+
+.estimate {
+    @include ptitle;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    width: 98%;
+    margin-top: 15px;
+
+    .section1,
+    .section2,
+    .section3 {
+        @include ptitle;
+        padding: 20px;
+        border-top: 1px solid $border-color;
+        display: flex;
+        flex-flow: wrap;
+
+        .shippingtitle1 {
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .shippingtitle2 {
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .shippingtitle3 {
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .shippingsummery {
+            width: 30%;
+            text-align: right;
+            // display: flex;
+        }
+
+        .marginRight20 {
+            margin-right: 20px;
+            font-size: 14px;
+        }
+    }
+
+    .shipping1 {
+        @include shipping;
+        display: flex;
+        width: 100%;
+
+    }
+
+    .shipping2 {
+        @include shipping;
+    }
+
+    .shipping3 {
+        @include shipping;
+    }
+
+    .shipping4 {
+        @include summery;
+        @include floatright;
+    }
+
+    .shipping5 {
+        @include floatright;
+        padding: 18.5px;
+        font-size: 14px;
+    }
+
+    .downarrow1 {
+        @include floatright;
+        padding: 26.7px;
+    }
+
+    .downarrow2 {
+        @include floatright;
+        padding: 26.6px;
+    }
+
+    .downarrow3 {
+        @include floatright;
+        padding: 26.4px;
+    }
+
+}

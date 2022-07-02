@@ -1,0 +1,32 @@
+@import '../partials/variables';
+@import '../common/mixin.scss';
+
+.footerrow {
+    @include headfootborder;
+    border-top: 1px solid $greyL2-color;
+}
+
+.footercontainer {
+    .footerbanner {
+        width: 60%;
+        padding-top: 5px;
+    }
+
+    .footeradres {
+        @include ptitle;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .footeruse {
+        @include ptitle;
+        @include footersizing;
+
+    }
+
+    .footerpolicy {
+        @include ptitle;
+        @include footersizing;
+        padding-left: 20px;
+    }
+}

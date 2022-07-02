@@ -1,0 +1,130 @@
+@import '../partials/variables';
+@import '../common/mixin.scss';
+
+.cart-container {
+    margin-bottom: 30px;
+
+    .img_box img {
+        width: 90%;
+    }
+    .button-spacer{
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+    .remove-btn{
+        cursor: pointer;
+    }
+    .details {
+        font-family: Mulish;
+        color: $unnamed-color;
+
+        .title {
+            @include ptitle;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .size {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .color {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .price {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    .cart_button {
+        padding-top: 50px;
+        padding-left: 50px;
+
+        .circle {
+            vertical-align: middle;
+        }
+    }
+
+    .trashIcon {
+        padding-top: 30px;
+    }
+
+    .trash {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+        vertical-align: text-top;
+
+    }
+
+    .edit2 {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+}
+
+.pricingborder {
+    border: 1px solid $border-color;
+    padding: 20px 10px;
+    @include ptitle;
+
+    .pricingtext {
+        font-size: 20px;
+    }
+
+    .subtotal {
+        @include pricingpadding;
+    }
+
+    .coupen {
+        @include pricingpadding;
+    }
+
+    .gift {
+        @include pricingpadding;
+    }
+
+    .tax {
+        @include pricingpadding;
+    }
+
+    .shhipping {
+        @include pricingpadding;
+    }
+
+    .total {
+        @include pricingpadding;
+    }
+
+    .pricing {
+        text-align: end;
+    }
+
+
+}
+
+.lock{
+  color: $white-color; 
+}
+
+.btnicon {
+    margin-top: 10px;
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 35px;
+    border-radius: 28px;
+    background-color: $primary-brand;
+}
+
+.paypalbtn{
+    padding-top: 10px;
+    width: 100%;
+}

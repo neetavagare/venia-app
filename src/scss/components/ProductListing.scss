@@ -1,0 +1,218 @@
+@import '../common/mixin.scss';
+@import '../partials/variables';
+
+
+.catagory {
+    @include ptitle;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .clothing {
+        @include size;
+    }
+
+    .women {
+        @include size;
+    }
+
+    .outwear {
+        @include size;
+        color: $grey-dark;
+    }
+
+    .results {
+        @include size;
+    }
+
+    .sort {
+        @include size;
+    }
+
+    .dropdownn {
+        border: 2px solid $greyL2-color;
+        border-radius: 8px;
+        padding: 8px;
+        width: 32%;
+        float: right;
+    }
+}
+
+
+.productItem {
+    @include ptitle;
+
+
+    .productMainImage {
+        text-align: center;
+        position: relative;
+        border: 0.5px solid $greyL2-color;
+        height: 230px;
+        width: 80%;
+
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+        }
+    }
+
+    .productMainImage:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
+
+    .producttitle {
+        margin: 0;
+        font-weight: bold;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: $unnamed-color;
+        text-decoration: none;
+    }
+
+    .product-anc {
+        text-decoration: none;
+    }
+
+    .productprice {
+        padding-bottom: 8px;
+    }
+
+    .ProductIcon {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+}
+
+.productFilters {
+    @include ptitle;
+
+    .catagory {
+        @include ptitle;
+        font-size: 16px;
+    }
+
+    .filter {
+        font-size: 16px;
+        padding-top: 10px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        @include filterborder;
+
+    }
+
+    .checkbox {
+        width: 21px;
+        height: 21px;
+        color: $grey-M1-color;
+    }
+
+    .filtertitle {
+        font-size: 16px;
+        font-weight: bolder;
+        // padding-top: 25px;
+        padding-bottom: 15px;
+    }
+
+    .filteroption {
+        margin-top: 4px;
+        font-size: 16px;
+        margin-left: 11px;
+        position: absolute;
+    }
+
+
+    .Box {
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        margin-top: 8px;
+        border-radius: 5px;
+        border: 2px solid $grey-M1-color;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .optionborder {
+        border-bottom: 1px solid $grey-M1-color;
+    }
+
+    .filterborder {
+        @include filterborder;
+    }
+}
+
+.boximg {
+    margin-top: 25px;
+
+    .colorbox {
+        width: 73%;
+        height: 141px;
+        padding-top: 117px;
+        padding-left: 128px;
+        font-size: 40px;
+        background-color: $unnamed-color;
+        color: $white-color;
+
+    }
+
+    .Bannerimg {
+        width: 100%;
+    }
+
+    .mobileimg {
+        width: 100%;
+        margin-top: -27px;
+    }
+
+    .blackbox {
+        margin: 0px 27px;
+        position: relative;
+        font-size: 36px;
+        margin-top: -76px;
+        padding: 39px 36px;
+        text-align: center;
+        color: $white-color;
+        background-color: $unnamed-color;
+    }
+
+}
+
+.catagories {
+    @include productcatagories;
+    padding-top: 20px;
+    padding-left: 15px;
+
+    .catagory3 {
+        color: $grey-dark;
+    }
+}
+
+.slider {
+    @include productcatagories;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    .slidertext {
+        padding-left: 10px;
+    }
+}
+
+.updownarrow {
+    @include productcatagories;
+    padding-top: 35px;
+
+    .sorttext {
+        padding-left: 8px;
+    }
+}
