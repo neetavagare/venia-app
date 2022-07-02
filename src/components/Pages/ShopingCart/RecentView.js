@@ -20,7 +20,7 @@ export default class RecentView extends Component {
                     {
                         RecentViewdata.map((item) => {
                             return <div>
-                                <img src={item.imageUrl} className="viewimges" />
+                                <img alt={item.title} src={item.imageUrl} className="viewimges" />
                                 <h5 className="viewtitle">{item.title}</h5>
                                 <p className="viewprice">${item.price}</p>
                             </div>

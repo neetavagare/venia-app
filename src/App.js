@@ -6,6 +6,7 @@ import { ProductDetails, ProductCatagory, ShopingCart } from './components/Pages
 import MobileHeader from './components/Header/MobileHeader';
 import Footer_content from './components/Footer/Footer_content';
 import Footer from './components/Footer/Footer';
+import ToastMessage from './components/atoms/ToastMessage/ToastMessage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <MobileHeader />
         <Header />
+        <ToastMessage time={8000}></ToastMessage>
         {/* <main> */}
           <Routes>
             <Route exact path="/" element={<ProductCatagory />} />

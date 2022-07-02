@@ -296,3 +296,4 @@ export const ColorFilter = [{
 ]
 export const APIBASE_URL = 'https://fakestoreapi.com';
 export const CART_LOCAL_STORAGE_VALUE = "cartsData";
+export const CART_EMPTY_MESSAGE = " Cart is empty. Please add product to cart. ";

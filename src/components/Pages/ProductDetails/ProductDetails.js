@@ -1,5 +1,4 @@
 import React from "react";
-import Details from '../../../images/Product_Images/Details.png';
 import Swatch01 from '../../../images/Product_Images/Swatch01.png';
 import Swatch02 from '../../../images/Product_Images/Swatch02.png';
 import Swatch03 from '../../../images/Product_Images/Swatch03.png';
@@ -8,11 +7,9 @@ import BreathIconn from '../../../images/Product_Images/BreathIconn.png';
 import BreathIcon2 from '../../../images/Product_Images/BreathIcon2.png';
 import swaetIcon1 from '../../../images/Product_Images/swaetIcon1.png';
 import swaetIcon2 from '../../../images/Product_Images/swaetIcon2.png';
-import CheckBox from "../../atoms/CheckBox/CheckBox";
-import Icon, { HeaderIcons } from '../../atoms/Icon/Icon';
-import { useEffect, useState } from "react";
+import Icon from '../../atoms/Icon/Icon';
+import { useState } from "react";
 import { getProductsSuccess, getProductsCountSuccess, hideLoader, showLoader, addProductToCart } from "../../../redux/actions/index.js";
-import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import { ProductService } from "../../../services/ProductService";
 import { useParams } from 'react-router-dom';
@@ -21,21 +18,21 @@ import RatingStar from '../../atoms/RatingStar/RatingStar';
 import Box from '../../atoms/Box/Box';
 import { ColorFilter, SizeFilter, Sizes } from '../../../config/Constant';
 import LocalService from "../../../services/LocalService/LocalService";
-
+import { useNavigate } from 'react-router-dom'
+import Helper from "../../../helper/Helper";
 function ProductDetails(props) {
 
     const { id } = useParams();
     const [count, setcount] = useState(0);
-    const [show, setShow] = useState(false);
-
     console.log(props.productData);
-
+    let navigate = useNavigate();
 
     useState(async () => {
         props.showLoader();
         var data = await ProductService.getProduct(id);
         props.getProductsSuccess(data);
         props.hideLoader();
+
     }, []);
 
     const addToCart = (product) => {
@@ -47,18 +44,22 @@ function ProductDetails(props) {
         };
         LocalService.addToCart(productCopy);
         props.addProductToCart(productCopy);
+        Helper.showToastMessage("Added Product To Bag");
+
+        navigate("/cart", { replace: true });
 
     }
 
-// Single Pruduct Details adding, increment, rating star, add to cart all working Component.
+    // Single Pruduct Details adding, increment, rating star, add to cart all working Component.
 
     return (
         <section>
             <Loader isLoading={props.isLoading}></Loader>
+
             <div className="aem-Grid aem-Grid--12 Productdetails">
                 <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
-                    
-                    <img src={props.productData.image} className="detailimage" />
+
+                    <img alt={props.productData.title} src={props.productData.image} className="detailimage" />
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
                     <div className="catagary">
@@ -69,7 +70,7 @@ function ProductDetails(props) {
                     <h2 className="peekbag">{props.productData.title}</h2>
                     <div className="detailprice">${props.productData.price}</div>
                     <div className="starIcon">
-                       <RatingStar count={props.productData?.rating?.rate}></RatingStar><span> ({props.productData?.rating?.count}) </span>
+                        <RatingStar count={props.productData?.rating?.rate}></RatingStar><span> ({props.productData?.rating?.count}) </span>
                     </div>
                     <div className="loreamdetail">{props.productData.description?.substring(0, 100)}.
                         <span>
@@ -80,10 +81,10 @@ function ProductDetails(props) {
                     </div>
                     <div className="detailcolor">Color</div>
                     <div>
-                        <img src={Swatch01} className="swatch1" />
-                        <img src={Swatch02} className="swatch2" />
-                        <img src={Swatch03} className="swatch3" />
-                        <img src={Swatch04} className="swatch4" />
+                        <img src={Swatch01} className="swatch1" alt="Image Color1" />
+                        <img src={Swatch02} className="swatch2" alt="Image Color1"/>
+                        <img src={Swatch03} className="swatch3" alt="Image Color1" />
+                        <img src={Swatch04} className="swatch4" alt="Image Color1"/>
                     </div>
                     <div className="detailsize">Size</div>
                     <div>
@@ -112,6 +113,7 @@ function ProductDetails(props) {
                                 () => {
                                     props.getProductsCountSuccess(count + 1);
                                     setcount(count + 1)
+
                                 }
                             }><Icon name="plus"> </Icon></button>
                         </div>
@@ -120,7 +122,7 @@ function ProductDetails(props) {
                         <span>  add to cart</span>
 
                     </button>
-                    <div  className="svgIcon">
+                    <div className="svgIcon">
                         <span className="saveIcon">
                             <Icon name="hurt"></Icon>
                             <span className="saving">Save</span>

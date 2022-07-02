@@ -8,25 +8,21 @@ export function productReducer(state = initialState, action) {
         ...state,
         productData: state.productData
       }
-      break;
     case actionTypes.GET_CARTS_SUCCESS:
       return {
         ...state,
         carts: state.carts
       }
-      break;
     case actionTypes.SHOW_LOADER:
       return {
         ...state,
         isLoading: true
       }
-      break;
     case actionTypes.HIDE_LOADER:
       return {
         ...state,
         isLoading: false
       }
-      break;
     case actionTypes.GET_CATEGORY_PRODUCTS:
       return {
         ...state,
@@ -59,20 +55,17 @@ export function productReducer(state = initialState, action) {
           error: ''
         }
       }
-      break;
 
     case actionTypes.GET_PRODUCTS_ERROR:
       return {
         productData: [],
         error: action.error
       }
-      break;
 
     default:
       return {
         ...state
       }
-      break;
   }
 }
 
@@ -80,7 +73,6 @@ export function productsCountReducer(state = initialState.count, action) {
   switch (action.type) {
     case actionTypes.GET_PRODUCTS_COUNT:
       return { count: state.count }
-      break;
     case actionTypes.GET_PRODUCTS_COUNT_SUCCESS:
       try {
         return {
@@ -94,20 +86,17 @@ export function productsCountReducer(state = initialState.count, action) {
           error: ''
         }
       }
-      break;
 
     case actionTypes.GET_PRODUCTS_COUNT_ERROR:
       return {
         count: state.count,
         error: action.payload
       }
-      break;
 
     default:
       return {
         count: state.count,
         error: state.error
       }
-      break;
   }
 }

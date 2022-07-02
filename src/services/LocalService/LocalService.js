@@ -9,7 +9,7 @@ export default class LocalService {
             var productsData = [];
             if (data.length) {
                 data.forEach(element => {
-                    if (element.id != product.id) {
+                    if (element.id !== product.id) {
                         productsData.push(element);
                     }
                 });

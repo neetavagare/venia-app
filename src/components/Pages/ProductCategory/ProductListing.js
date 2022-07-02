@@ -5,7 +5,6 @@ import CheckBox from "../../atoms/CheckBox/CheckBox";
 import Icon from "../../atoms/Icon/Icon";
 import Banner from '../../../images/Product_Images/Banner.png';
 import { Link } from 'react-router-dom';
-import MobileImg from '../../../images/Product_Images/MobileImg.png';
 import Box from "../../atoms/Box/Box";
 
 export default function ProductListing(props) {

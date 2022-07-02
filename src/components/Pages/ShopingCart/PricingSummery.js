@@ -1,5 +1,4 @@
 import React from "react";
-import { HeaderIcons } from "../../../config/Constant";
 import Icon from "../../atoms/Icon/Icon";
 import ppbtn from '../../../images/Product_Images/ppbtn.png';
 
@@ -34,7 +33,7 @@ export default function PricingSummery(props) {
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12" >
-                <img src={ppbtn} className="paypalbtn" />
+                <img alt="Payplay" src={ppbtn} className="paypalbtn" />
             </div>
         </React.Fragment>
     )

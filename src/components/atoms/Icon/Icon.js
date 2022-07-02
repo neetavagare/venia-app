@@ -1,13 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
 // Reusable Icons
 
 export default function Icon(props) {
-    const count = useSelector((state) =>
-        //    console.log('first',state)
-        state.count.count
-    )
     var labelName = props.name
 
     return (

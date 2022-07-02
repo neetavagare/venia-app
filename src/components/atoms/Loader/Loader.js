@@ -1,12 +1,3 @@
-import ClipLoader from "react-spinners/ClipLoader";
-
-// Loader Component
-
-const override = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "black",
-};
 
 function Loader(props) {
     let isLoading = props.isLoading;

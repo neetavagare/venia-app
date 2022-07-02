@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProductListing from './ProductListing';
 import { ProductService } from "../../../services/ProductService";
 import { connect } from "react-redux";

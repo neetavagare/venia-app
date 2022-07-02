@@ -1,17 +1,17 @@
 import React from "react";
-import { HeaderLabels } from "../../../config/Constant";
+import { CART_EMPTY_MESSAGE } from "../../../config/Constant";
 import Icon from '../../atoms/Icon/Icon';
 import Banner from "./Banner";
 
 import RecentView from "./RecentView";
 import Estimaterow from './Estimaterow';
 import { connect } from "react-redux";
-import { getProductsSuccess, getCarts, hideLoader, showLoader, addProductToCart, replaceCart } from "../../../redux/actions/index.js";
-import { useEffect, useState } from "react";
+import { getCarts, hideLoader, showLoader, addProductToCart, replaceCart } from "../../../redux/actions/index.js";
+import { useState } from "react";
 import Loader from "../../atoms/Loader/Loader";
 import LocalService from "../../../services/LocalService/LocalService";
 import PricingSummery from './PricingSummery';
-
+import Helper from "../../../helper/Helper";
 function ShopingCart(props) {
 
     useState(async () => {
@@ -32,6 +32,7 @@ function ShopingCart(props) {
         LocalService.removeProductCart(item);
         let cartItems = LocalService.getCart();
         props.replaceCart(cartItems);
+        Helper.showToastMessage("Removed Product from Bag",true);
     }
 
     return (
@@ -44,9 +45,9 @@ function ShopingCart(props) {
             <div className='aem-Grid aem-Grid--12'>
                 <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12' >
                     {
-                        props.carts.length == 0 ?
+                        props.carts.length === 0 ?
                             <div className='aem-Grid aem-GridColumn--default--8' >
-                                <h1> Cart is empty. Please add product to cart. </h1>
+                                <h1> {CART_EMPTY_MESSAGE}</h1>
                             </div> : null
                     }
                     {props.carts.map((item) => {
@@ -56,7 +57,7 @@ function ShopingCart(props) {
                                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11' >
                                     <div className="aem-Grid aem-Grid--4">
                                         <div className='aem-GridColumn aem-GridColumn--default--2 img_box'>
-                                            <img src={item.image} className="image" />
+                                            <img alt={item.title} src={item.image} className="image" />
                                         </div>
                                         <div className='aem-GridColumn aem-GridColumn--default--2 details'>
                                             <p className="title">  {title}</p>
@@ -99,7 +100,7 @@ function ShopingCart(props) {
                     {/* Estimating row tabel component */}
 
                     {
-                        props.carts.length == 0 ? null :
+                        props.carts.length === 0 ? null :
                             <Estimaterow></Estimaterow>
                     }
 
