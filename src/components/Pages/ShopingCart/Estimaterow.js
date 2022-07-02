@@ -1,7 +1,8 @@
 import React from 'react';
 import Icon from '../../atoms/Icon/Icon';
+import { Anchor } from '../../atoms';
 
- // Estimating Row tabel.
+// Estimating Row tabel.
 
 export default function Estimaterow() {
     return (
@@ -24,7 +25,7 @@ export default function Estimaterow() {
                         </div>
                         <div className='shippingsummery'>
                             <span className='mobileHideInline marginRight20'>20% discount applied</span>
-                             <Icon name="downarrow"> </Icon>
+                            <Anchor><Icon name="downarrow"> </Icon></Anchor>
                         </div>
                         <div className='deskTopHide'>20% discount applied</div>
                     </div>
@@ -33,7 +34,7 @@ export default function Estimaterow() {
                             Apply Gift Card
                         </div>
                         <div className='shippingsummery'>
-                             <Icon name="downarrow"> </Icon>
+                            <Anchor><Icon name="downarrow"> </Icon></Anchor>
                         </div>
                     </div>
                 </div>

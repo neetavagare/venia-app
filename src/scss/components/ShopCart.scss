@@ -17,6 +17,9 @@
     .details {
         font-family: Mulish;
         color: $unnamed-color;
+        .title-link{
+            text-decoration: none;
+        }
 
         .title {
             @include ptitle;

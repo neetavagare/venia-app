@@ -1,5 +1,8 @@
 import React from "react";
 import DesktopBanner from '../../images/Product_Images/DesktopBanner.png';
+import { Image } from "../atoms";
+import { Anchor } from '../atoms';
+import {Paragraph} from '../atoms';
 
 
 export default function Footer() {
@@ -7,14 +10,14 @@ export default function Footer() {
     <footer className="footerrow">
       <div className='aem-Grid aem-Grid--12 footercontainer'>
         <div className='aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12'>
-          <img src={DesktopBanner} className="footerbanner" />
+          <Anchor><Image alt={""} url={DesktopBanner} classValue="footerbanner" ></Image></Anchor>
         </div>
         <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--8'>
-          <p className="footeradres">@ Company Name Address Ave, City Name, State ZIP</p>
+         <Anchor> <Paragraph classValue="footeradres" name='@ Company Name Address Ave, City Name, State ZIP'></Paragraph></Anchor>
         </div>
         <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12'>
-          <a className="footerpolicy">Privacy Policy</a>
-          <a className="footeruse">Terms of Use</a>
+        <Anchor classValue={'footerpolicy'} name = "Privacy Policy" ></Anchor>
+        <Anchor classValue={'footeruse'} name = "Terms of Use" ></Anchor>
         </div>
       </div>
 

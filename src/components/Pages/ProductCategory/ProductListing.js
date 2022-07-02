@@ -6,18 +6,20 @@ import Icon from "../../atoms/Icon/Icon";
 import Banner from '../../../images/Product_Images/Banner.png';
 import { Link } from 'react-router-dom';
 import Box from "../../atoms/Box/Box";
+import { Image } from "../../atoms";
+import { Paragraph } from '../../atoms';
+import { Anchor } from '../../atoms';
+
 
 export default function ProductListing(props) {
     return (
-
         // Product Listing Component Page
-
         <section>
             <div className="aem-Grid aem-Grid--12">
                 <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--4 boximg">
                     <div className="deskTopHide">
                         <div>
-                            <img src={Banner} className="mobileimg" />
+                            <Image alt={""} url={Banner} classValue="mobileimg"></Image>
                         </div>
                         <div className="blackbox">
                             Women's Outerwear
@@ -29,35 +31,37 @@ export default function ProductListing(props) {
                         </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12 mobileHide">
-                        <img src={Banner} className="Bannerimg" />
+                        <Image alt={""} url={Banner} classValue="Bannerimg"></Image>
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 deskTopHide catagories">
-                    <Label name="Clothing" className="catagory1">
-                    </Label>/
-                    <Label name="Women's" className="catagory2">
-                    </Label>/
-                    <Label name="Outerwear" className="catagory3">
-                    </Label>
+                    <div style={{paddingLeft:10}}>
+                        <Anchor classValue="cursor-pointer"><Label name="Clothing" className="catagory1">
+                        </Label>/</Anchor>
+                        <Anchor classValue="cursor-pointer"><Label name="Women's" className="catagory2">
+                        </Label>/</Anchor>
+                        <Anchor classValue="cursor-pointer"><Label name="Outerwear" className="catagory3">
+                        </Label></Anchor>
+                    </div>
                 </div>
                 <div className="aem-Grid aem-Grid--4 deskTopHide">
                     <div className="aem-GridColumn aem-GridColumn--phone--2 slider">
-                        <Icon name="slider"> </Icon>
-                        <a href="" className="slidertext">
-                            Filter Results
-                        </a>
+                        <Anchor><Icon name="slider"> </Icon></Anchor>
+                        <Anchor href="" classValue="slidertext"
+                            name='Filter Results'
+                        ></Anchor>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--phone--2 updownarrow">
-                        <Icon name="uparrow"> </Icon>
-                        <Icon name="down-arrow"> </Icon>
-                        <a href="" className="sorttext">Sort Product</a>
+                        <Anchor><Icon name="uparrow"> </Icon></Anchor>
+                        <Anchor><Icon name="down-arrow"> </Icon></Anchor>
+                        <Anchor href="" className="sorttext" name='Sort Product'></Anchor>
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 catagory">
                     <div className="aem-GridColumn aem-GridColumn--default--3 mobileHide">
-                        <span className="clothing">Clothing/</span>
-                        <span className="women">Women’s/</span>
-                        <span className="outwear">Outerwear</span>
+                        <Anchor classValue="cursor-pointer"><span className="clothing">Clothing/</span></Anchor>
+                        <Anchor classValue="cursor-pointer"><span className="women">Women’s/</span></Anchor>
+                        <Anchor classValue="cursor-pointer"><span className="outwear">Outerwear</span></Anchor>
                     </div>
 
                     {/* Results Are working. */}
@@ -139,10 +143,10 @@ export default function ProductListing(props) {
                             props.data && props.data.map((item) => {
                                 return <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6" key={item.id}>
                                     <div className="productItem">
-                                        <div className="productMainImage"> <img src={item.image} className=" productimage" /> </div>
+                                        <div className="productMainImage"> <Image alt={""} url={item.image} classValue="productimage"></Image></div>
                                         <Link to={"/product/" + item.id} className="product-anc" ><p className="producttitle">{item.title.substring(0, 16)}</p></Link>
                                         <div className="productprice">${item.price}</div>
-                                        <div className="ProductIcon"><Icon name="hurt"> </Icon></div>
+                                        <div className="ProductIcon"><Anchor><Icon name="hurt"> </Icon></Anchor></div>
                                     </div>
                                 </div>
                             })

@@ -8,6 +8,9 @@ import { connect } from "react-redux";
 import { useEffect, useState } from "react";
 import { addProductToCart, replaceCart } from "../../redux/actions/index";
 import LocalService from '../../services/LocalService/LocalService';
+import { Image } from "../atoms";
+import {Anchor} from '../atoms';
+
 
 function Header(props) {
     useEffect(() => {
@@ -23,23 +26,23 @@ function Header(props) {
     return (
         <header className='aem-Grid aem-Grid--12 headerborder mobileHide'> 
             <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
-                <Link to={"/"} ><img src={DesktopBanner} className="venia" /></Link>
+                <Link to={"/"} ><Anchor><Image alt={""} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
                 {
                     HeaderLabels.manuItems.map((item) => {
-                        return <Label key={item.label} name={item.label} classValue={item.className}></Label>
+                        return <Anchor classValue="cursor-pointer"><Label key={item.label} name={item.label} classValue={item.className}></Label></Anchor>
                     })
                 }
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
                 <div>
-                    <Icon name="Search"> </Icon>
-                    <Label name="Search" className="text5">
-                    </Label>
-                    <Icon name="User" />
-                    <span><Label name="Sign in" className="text6"></Label> </span>
-                    <Link to={"/cart"} ><Icon name="ShopBag"> </Icon> <span className='cart-count'> {props.carts.length}</span>  </Link>
+                   <Anchor> <Icon name="Search"> </Icon></Anchor>
+                   <Anchor><Label name="Search" className="text5">
+                    </Label></Anchor>
+                    <Anchor><Icon name="User" /></Anchor>
+                    <span><Anchor><Label name="Sign in" className="text6"></Label></Anchor> </span>
+                    <Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span>  </Link>
 
                 </div>
             </div>

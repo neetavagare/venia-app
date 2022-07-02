@@ -1,0 +1,17 @@
+@import '../partials/variables';
+
+.pagination {
+    li {
+        margin-left: 20px;
+        display: inline-block
+    }
+
+    .selectedColor {
+        color: $primary-brand;
+    }
+
+    list-style: none;
+    display: block;
+    text-align:center;
+    padding-left: 0;
+}

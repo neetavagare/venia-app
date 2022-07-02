@@ -40,7 +40,7 @@
 
 .productItem {
     @include ptitle;
-
+    text-align: -webkit-center;
 
     .productMainImage {
         text-align: center;

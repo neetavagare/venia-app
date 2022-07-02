@@ -1,21 +1,16 @@
-// import {NavLink} from "react-router-dom";
+import { Anchor } from "../../atoms";
 
-// const Pegination = ({cardsPerPage, totalCards, Pegintaion})=>{
-//     const PageNumbers = [];
+const Pagination = (props) => {
 
-//     for(let i=1; i<=Math.cell(totalCards,cardsPerPage); i++){
-//         PageNumbers.push(1);
-//     }
-//     const activeLinkStyle=({isActive})=>{
-//         return(
-//             fontWeight: isActive ? "bold":"normal",
-//             textDecoration:isActive ? "underline":"none",
-//         )
-//     }
-//     return(
-//         <div className="pegination">
-//             <ul></ul>
-
-//         </div>
-//     )
-// }
+    return (
+        <ul className="pagination">
+            {
+                [...Array(props.totalItem)].map((item, index) => {
+                    return <li onClick={(e) => props.paginate(e, index + 1)}>
+                        <Anchor classValue="cursor-pointer" name={index + 1}></Anchor> </li>
+                })
+            }
+        </ul >
+    )
+}
+export default Pagination;

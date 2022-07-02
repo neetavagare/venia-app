@@ -20,6 +20,9 @@ import { ColorFilter, SizeFilter, Sizes } from '../../../config/Constant';
 import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
+import { Anchor, Image, Paragraph } from "../../atoms";
+
+
 function ProductDetails(props) {
 
     const { id } = useParams();
@@ -58,14 +61,13 @@ function ProductDetails(props) {
 
             <div className="aem-Grid aem-Grid--12 Productdetails">
                 <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
-
-                    <img alt={props.productData.title} src={props.productData.image} className="detailimage" />
+                    <Image alt={props.productData.title} url={props.productData.image} classValue="detailimage"></Image>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
                     <div className="catagary">
-                        <span className="catagory1">Clothing/</span>
-                        <span className="catagory2">Women’s/</span>
-                        <span className="catagory3">Outerwear</span>
+                        <Anchor classValue="cursor-pointer"><span className="catagory1">Clothing/</span></Anchor>
+                        <Anchor classValue="cursor-pointer"><span className="catagory2">Women’s/</span></Anchor>
+                        <Anchor classValue="cursor-pointer"><span className="catagory3">Outerwear</span></Anchor>
                     </div>
                     <h2 className="peekbag">{props.productData.title}</h2>
                     <div className="detailprice">${props.productData.price}</div>
@@ -74,17 +76,15 @@ function ProductDetails(props) {
                     </div>
                     <div className="loreamdetail">{props.productData.description?.substring(0, 100)}.
                         <span>
-                            <a className="readmore" href="">
-                                Read more
-                            </a>
+                            <Anchor className="readmore" name="Read More"></Anchor>
                         </span>
                     </div>
                     <div className="detailcolor">Color</div>
                     <div>
-                        <img src={Swatch01} className="swatch1" alt="Image Color1" />
-                        <img src={Swatch02} className="swatch2" alt="Image Color1"/>
-                        <img src={Swatch03} className="swatch3" alt="Image Color1" />
-                        <img src={Swatch04} className="swatch4" alt="Image Color1"/>
+                        <Image alt={'Image Color1'} url={Swatch01} classValue="swatch1"></Image>
+                        <Image alt={'Image Color1'} url={Swatch02} classValue="swatch2"></Image>
+                        <Image alt={'Image Color1'} url={Swatch03} classValue="swatch3"></Image>
+                        <Image alt={'Image Color1'} url={Swatch04} classValue="swatch4"></Image>
                     </div>
                     <div className="detailsize">Size</div>
                     <div>
@@ -95,7 +95,8 @@ function ProductDetails(props) {
                             )}
                     </div>
                     <div>
-                        <p className="quantity">Quantity</p>
+                        {/* <p className="quantity">Quantity</p> */}
+                        <Paragraph classValue="quantity" name="Quantity"></Paragraph>
                         <div className="incrementbtn">
                             <button onClick={() => {
                                 if (count <= 0) {
@@ -107,7 +108,7 @@ function ProductDetails(props) {
                                 }
                             }}
                                 className="btn-background"
-                            ><Icon name="minus" className="minusIcon" > </Icon></button>
+                            ><Anchor><Icon name="minus" className="minusIcon" > </Icon></Anchor></button>
                             <button className="quanrbtn" >{count}</button>
                             <button className="btn-background" onClick={
                                 () => {
@@ -115,7 +116,7 @@ function ProductDetails(props) {
                                     setcount(count + 1)
 
                                 }
-                            }><Icon name="plus"> </Icon></button>
+                            }><Anchor><Icon name="plus"> </Icon></Anchor></button>
                         </div>
                     </div>
                     <button className="addbtn" onClick={() => addToCart(props.productData)}>
@@ -124,12 +125,12 @@ function ProductDetails(props) {
                     </button>
                     <div className="svgIcon">
                         <span className="saveIcon">
-                            <Icon name="hurt"></Icon>
-                            <span className="saving">Save</span>
+                            <Anchor><Icon name="hurt"></Icon></Anchor>
+                            <Anchor><span className="saving">Save</span></Anchor>
                         </span>
                         <span>
-                            <Icon name="share-2"> </Icon>
-                            <span className="sharing">Share</span>
+                            <Anchor><Icon name="share-2"> </Icon></Anchor>
+                            <Anchor><span className="sharing">Share</span></Anchor>
                         </span>
                     </div>
                 </div>
@@ -138,19 +139,19 @@ function ProductDetails(props) {
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 productdescribe">
                     <h2 className="hoodie mobile-text-align-center">{props.productData.title}</h2>
                     <div className="description mobile-text-align-center">Description</div>
-                    <p className="describe">
-                        {props.productData.description}
-                    </p>
+                    <Paragraph classValue="describe"
+                        name={props.productData.description} >
+                    </Paragraph>
                     <div className="sectionender mobileHide"></div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 detailing">
                     <div className="aem-Grid aem-Grid--6 ">
                         <div className="aem-GridColumn aem-GridColumn--default--3">
                             <div className="aem-Grid aem-Grid--3 ">
-                                <p className="precaution">Details</p>
+                                <Paragraph classValue="precaution" name='Details'></Paragraph>
                                 <div className="aem-GridColumn aem-GridColumn--default--1">
-                                    <img src={swaetIcon1} className="swaetIcon1" />
-                                    <img src={swaetIcon2} className="swaetIcon2" />
+                                    <Image alt={""} url={swaetIcon1} classValue="swaetIcon1"></Image>
+                                    <Image alt={""} url={swaetIcon2} classValue="swaetIcon2"></Image>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--2">
                                     <div className="wicking">Sweat-wicking </div>
@@ -161,8 +162,8 @@ function ProductDetails(props) {
                         <div className="aem-GridColumn aem-GridColumn--default--3 content2">
                             <div className="aem-Grid aem-Grid--3 ">
                                 <div className="aem-GridColumn aem-GridColumn--default--1">
-                                    <img src={BreathIconn} className="BreathIconn" />
-                                    <img src={BreathIcon2} className="BreathIcon2" />
+                                    <Image alt={""} url={BreathIconn} classValue="BreathIconn"></Image>
+                                    <Image alt={""} url={BreathIcon2} classValue="BreathIcon2"></Image>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--2">
                                     <div className="breath">Breathable</div>

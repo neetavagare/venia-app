@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { RecentViewdata } from "../../../config/Constant";
+import { Image } from "../../atoms";
 
  // Recent view slider Carousel Component
 
@@ -20,7 +21,7 @@ export default class RecentView extends Component {
                     {
                         RecentViewdata.map((item) => {
                             return <div>
-                                <img alt={item.title} src={item.imageUrl} className="viewimges" />
+                                <Image alt={item.title} url={item.imageUrl} classValue="viewimges"></Image>
                                 <h5 className="viewtitle">{item.title}</h5>
                                 <p className="viewprice">${item.price}</p>
                             </div>

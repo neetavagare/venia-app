@@ -7,16 +7,19 @@
         padding-top: 25px;
 
         .catagory1 {
+            @include cursor;
             @include size;
 
         }
 
         .catagory2 {
+            @include cursor;
             @include size;
         }
 
         .catagory3 {
             @include size;
+            @include cursor;
             color: $grey-dark;
         }
     }

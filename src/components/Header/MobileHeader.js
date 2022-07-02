@@ -3,22 +3,42 @@ import HeaderIcons from '../../config/Constant';
 import Icon from "../atoms/Icon/Icon";
 import DesktopBanner from '../../images/Product_Images/DesktopBanner.png';
 import { Link } from 'react-router-dom';
+import { Image } from "../atoms";
+import {Anchor} from '../atoms';
+import { connect } from "react-redux";
 
 // Mobile Banner Row.
+function MobileHeader(props) {
 
-export default function MobileHeader() {
     return (
         <header className='aem-Grid aem-Grid--4  aem-GridColumn--tablet--12 deskTopHide mobileheader'>
             <div className="aem-GridColumn aem-GridColumn--phone--1 menu">
-                <Icon name="menu" className="menu"> </Icon>
+            <Anchor><Icon name="menu" className="menu"> </Icon></Anchor>
             </div>
             <div className="aem-GridColumn aem-GridColumn--phone--2">
-                <Link to={"/"} ><img src={DesktopBanner} /></Link>
+                <Link to={"/"}><Anchor><Image alt={""} url={DesktopBanner} ></Image></Anchor></Link>
             </div>
             <div className="aem-GridColumn aem-GridColumn--phone--1 mobileIcon">
-                <Icon name="Search" className="searchIcon"></Icon>
-                <Icon name="ShopBag"> </Icon>
+            <Anchor><Icon name="Search" className="searchIcon"></Icon></Anchor>
+            {/* <Anchor><Icon name="ShopBag"> </Icon></Anchor> */}
+            <Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span>  </Link>
+
             </div>
         </header>
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        carts: state.feature.carts,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        // addProductToCart: (payload) => dispatch(addProductToCart(payload)),
+        // replaceCart: (payload) => dispatch(replaceCart(payload))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MobileHeader);

@@ -12,6 +12,9 @@ import Loader from "../../atoms/Loader/Loader";
 import LocalService from "../../../services/LocalService/LocalService";
 import PricingSummery from './PricingSummery';
 import Helper from "../../../helper/Helper";
+import { Image, Paragraph } from "../../atoms";
+import { Link } from 'react-router-dom';
+
 function ShopingCart(props) {
 
     useState(async () => {
@@ -57,10 +60,12 @@ function ShopingCart(props) {
                                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11' >
                                     <div className="aem-Grid aem-Grid--4">
                                         <div className='aem-GridColumn aem-GridColumn--default--2 img_box'>
-                                            <img alt={item.title} src={item.image} className="image" />
+                                        <Image alt={item.title} url={item.image} classValue="image"></Image>
+
                                         </div>
                                         <div className='aem-GridColumn aem-GridColumn--default--2 details'>
-                                            <p className="title">  {title}</p>
+                                        <Link to={"/product/"+item.id} className="title-link"> <Paragraph name={title} classValue={'title'}></Paragraph>  </Link>
+                                            {/* <p className="title">  {title}</p> */}
                                             <div className="size"> Size : {item.size}</div>
                                             <div className="color"> Color : {item.color}</div>
                                             <div className="price">${item.price}</div>

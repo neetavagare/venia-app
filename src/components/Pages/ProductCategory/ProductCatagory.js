@@ -5,27 +5,57 @@ import { connect } from "react-redux";
 import { getCategoryProducts, hideLoader, showLoader, sortProduct } from "../../../redux/actions";
 import Loader from "../../atoms/Loader/Loader";
 
+import Pagination from "./Pegination";
+
 function ProductCatagory(props) {
 
-//  Sorting By Catagory Component
+  let pageSize = 5;
+  let [showPagination, SetShowPagination] = useState(true);
 
   useState(async () => {
     props.showLoader()
     var products = await ProductService.getCategory();
     props.getCategoryProducts(products);
+    props.sortProduct(products.slice(0, pageSize));
     props.hideLoader()
   }, [])
 
   const sortByCategory = (item) => {
     let filterData = props.products.filter(d => d.category == item.currentTarget.value);
     props.sortProduct(filterData);
+    if (item.currentTarget.value === "0") {
+      SetShowPagination(true);
+    } else {
+      SetShowPagination(false);
+    }
+  }
+
+  let totalItem = (props.products?.length / pageSize) ?? 0
+  totalItem = Math.floor(totalItem)
+
+  const paginate = (e, item) => {
+    for (let index = 0; index < e.currentTarget.parentElement.children.length; index++) {
+      const element = e.currentTarget.parentElement.children[index];
+      element.classList.remove('selectedColor')
+    }
+
+    e.currentTarget.classList.add('selectedColor')
+    let filterData = props.products.slice((item - 1) * pageSize, item * pageSize);
+    props.sortProduct(filterData);
   }
 
   let data = props.sortedProducts.length > 0 ? props.sortedProducts : props.products
 
+
   return <React.Fragment>
     <Loader isLoading={props.isLoading}></Loader>
-    <ProductListing data={data} sortByCategory={sortByCategory}></ProductListing>;
+    <ProductListing data={data} sortByCategory={sortByCategory}></ProductListing>
+    {
+      showPagination &&
+      <Pagination totalItem={totalItem} paginate={paginate}></Pagination>
+
+    }
+
   </React.Fragment>
 }
 
