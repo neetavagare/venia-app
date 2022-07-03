@@ -6,7 +6,7 @@ const Pagination = (props) => {
         <ul className="pagination">
             {
                 [...Array(props.totalItem)].map((item, index) => {
-                    return <li onClick={(e) => props.paginate(e, index + 1)}>
+                    return <li key={"co"+index} onClick={(e) => props.paginate(e, index + 1)}>
                         <Anchor classValue="cursor-pointer" name={index + 1}></Anchor> </li>
                 })
             }

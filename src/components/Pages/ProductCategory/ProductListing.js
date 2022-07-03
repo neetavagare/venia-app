@@ -92,7 +92,7 @@ export default function ProductListing(props) {
                         <div>
                             {
                                 SizeFilter.map((item, index) => (
-                                    <React.Fragment>
+                                    <React.Fragment key={"ch"+index}>
                                         <div>
                                             <CheckBox type="checkbox" />
                                             <span className={Filters[0].className}>{item.text}</span>
@@ -104,7 +104,7 @@ export default function ProductListing(props) {
                             <div className="filter">Style</div>
                             {
                                 StylesFilter.map((item, index) => (
-                                    <React.Fragment>
+                                    <React.Fragment key={"fl"+index}>
                                         <div>
                                             <CheckBox type="checkbox" />
                                             <span className={Filters[0].className}>{item.text}</span>
@@ -115,13 +115,13 @@ export default function ProductListing(props) {
                             <div className="filter">Color</div>
                             {
                                 ColorFilter.map((item, index) => (
-                                    <Box background={item.text} />
+                                    <Box key={"flt"+index} background={item.text} />
                                 )
                                 )}
                             <div className="filter">Brand</div>
                             {
                                 BrandFilter.map((item, index) => (
-                                    <React.Fragment>
+                                    <React.Fragment key={"ftr"+index}>
                                         <div>
                                             <CheckBox type="checkbox" />
                                             <span className={Filters[0].className}>{item.text}</span>

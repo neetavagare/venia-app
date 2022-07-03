@@ -6,9 +6,9 @@ export default function Anchor(props) {
 
     return (
         <a className={classNm} > {props.name}
-           {
-            props.children ?  props.children : ""
-           }
-         </a>
+            {
+                props.children ? props.children : null
+            }
+        </a>
     )
 }

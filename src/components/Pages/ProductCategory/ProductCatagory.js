@@ -6,6 +6,7 @@ import { getCategoryProducts, hideLoader, showLoader, sortProduct } from "../../
 import Loader from "../../atoms/Loader/Loader";
 
 import Pagination from "./Pegination";
+import Helper from "../../../helper/Helper";
 
 function ProductCatagory(props) {
 
@@ -14,9 +15,12 @@ function ProductCatagory(props) {
 
   useState(async () => {
     props.showLoader()
-    var products = await ProductService.getCategory();
-    props.getCategoryProducts(products);
-    props.sortProduct(products.slice(0, pageSize));
+    var products = await ProductService.getCategory().catch((e)=>{
+      props.hideLoader();
+      Helper.showToastMessage("Something went wrong. Please try again")  
+    });
+    props.getCategoryProducts(products)
+    props.sortProduct(products?.slice(0, pageSize)?? [])
     props.hideLoader()
   }, [])
 

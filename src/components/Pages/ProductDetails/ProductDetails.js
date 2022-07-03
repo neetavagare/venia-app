@@ -20,7 +20,8 @@ import { ColorFilter, SizeFilter, Sizes } from '../../../config/Constant';
 import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
-import { Anchor, Image, Paragraph } from "../../atoms";
+import { Anchor, Image, Paragraph,ProductGallery } from "../../atoms";
+
 
 
 function ProductDetails(props) {
@@ -29,14 +30,23 @@ function ProductDetails(props) {
     const [count, setcount] = useState(0);
     console.log(props.productData);
     let navigate = useNavigate();
-
+    let [images,setImages] = useState(null);
     useState(async () => {
         props.showLoader();
         var data = await ProductService.getProduct(id);
         props.getProductsSuccess(data);
         props.hideLoader();
-
+        let imagesArray = [
+        ];
+        [...Array(8)].map((item, indxe) => {
+            return imagesArray.push({
+                original: data.image,
+                thumbnail: data.image
+            })
+        })
+        setImages(imagesArray);
     }, []);
+
 
     const addToCart = (product) => {
         let productCopy = {
@@ -60,8 +70,11 @@ function ProductDetails(props) {
             <Loader isLoading={props.isLoading}></Loader>
 
             <div className="aem-Grid aem-Grid--12 Productdetails">
-                <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
-                    <Image alt={props.productData.title} url={props.productData.image} classValue="detailimage"></Image>
+                <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12 paddingTop15">
+                    {
+                        images?.length > 0 &&
+                        <ProductGallery images={images} />
+                    }
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
                     <div className="catagary">
