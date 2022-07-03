@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { addProductToCart, replaceCart } from "../../redux/actions/index";
 import LocalService from '../../services/LocalService/LocalService';
 import { Image } from "../atoms";
-import {Anchor} from '../atoms';
+import { Anchor } from '../atoms';
 
 
 function Header(props) {
@@ -21,24 +21,24 @@ function Header(props) {
         props.replaceCart(itemData);
     };
 
-// Header Of all Pages Banner row.
+    // Header Of all Pages Banner row.
 
     return (
-        <header className='aem-Grid aem-Grid--12 headerborder mobileHide'> 
+        <header className='aem-Grid aem-Grid--12 headerborder mobileHide'>
             <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
                 <Link to={"/"}  ><Anchor><Image alt={""} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
                 {
                     HeaderLabels.manuItems.map((item) => {
-                        return  <Link className="decorationNone" to={"/"} ><Anchor classValue="cursor-pointer"><Label key={item.label} name={item.label} classValue={item.className}></Label></Anchor></Link>
+                        return <Link className="decorationNone cursor-pointer" to={"/"} ><Label key={item.label} name={item.label} classValue={item.className}></Label></Link>
                     })
                 }
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
                 <div>
-                   <Anchor> <Icon name="Search"> </Icon></Anchor>
-                   <Anchor><Label name="Search" className="text5">
+                    <Anchor> <Icon name="Search"> </Icon></Anchor>
+                    <Anchor><Label name="Search" className="text5">
                     </Label></Anchor>
                     <Anchor><Icon name="User" /></Anchor>
                     <span><Anchor><Label name="Sign in" className="text6"></Label></Anchor> </span>
@@ -64,4 +64,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
-

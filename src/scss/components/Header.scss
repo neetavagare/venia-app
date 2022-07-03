@@ -5,15 +5,26 @@
 .headerborder {
     @include headfootborder;
     padding-bottom: 10px;
+    background: #fff 0 0 no-repeat padding-box;
+    border-bottom: 1px solid $grey-M1-color;
+    margin: 0 auto;
+    max-width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
 }
 
 .venia {
-    width: 58%;
+    width: 42%;
 }
+
 //  Header Labels sass
+
 .header_text {
     font-family: Mulish;
-    padding-top: 30px;
+    padding-top: 16px;
     font-size: 16px;
 
     .text1 {
@@ -38,7 +49,7 @@
 .header_icons {
     font-family: Mulish;
     text-align: end;
-    padding-top: 20px;
+    padding-top: 16px;
 
     .text5 {
         @include textss;

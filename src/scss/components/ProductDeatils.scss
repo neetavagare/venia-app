@@ -3,8 +3,8 @@
 
 .Productdetails {
     .paddingTop15 {
-        margin-top: 15px;
-        padding-right: 15px;
+        margin-top: 20px;
+        padding-right: 40px;
     }
 
     .catagary {
@@ -74,6 +74,7 @@
     .detailcolor {
         @include ptitle;
         padding-bottom: 15px;
+        padding-top: 15px;
         font-size: 20px;
         @include boldFont
     }
@@ -169,9 +170,12 @@
 }
 
 .productdescribe {
+    padding-top: 40px;
+
     .hoodie {
         @include peekbagtitle;
         padding-bottom: 20px;
+        
     }
 
     .describe {

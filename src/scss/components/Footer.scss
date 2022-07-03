@@ -2,7 +2,7 @@
 @import '../common/mixin.scss';
 
 .footerrow {
-    @include headfootborder;
+    // @include headfootborder;
     border-top: 1px solid $greyL2-color;
 }
 
@@ -29,4 +29,51 @@
         @include footersizing;
         padding-left: 20px;
     }
+}
+
+
+
+.footer-bottom {
+
+    padding: 24px 0;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    figure {
+
+        img {
+            width: 7rem;
+            object-fit: cover;
+            height: 20px;
+        }
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .left-nav {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: underline;
+            list-style: none;
+            color: $grey-dark;
+        }
+    }
+
+    .footerColor{
+        color: $grey-dark;
+
+    }
+
 }

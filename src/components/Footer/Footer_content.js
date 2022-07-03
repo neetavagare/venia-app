@@ -1,7 +1,7 @@
 import React from 'react';
 import Anchor from '../atoms/Anchor/Anchor';
 import Icon from '../atoms/Icon/Icon';
-import {Paragraph} from '../atoms/';
+import {Paragraph} from '../atoms';
 
 export default function Footer_content() {
     return (
