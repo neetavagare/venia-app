@@ -155,12 +155,27 @@
 
 .boximg {
     margin-top: 25px;
-
+    display: flex;
+   
+    .black-image-div{
+        display: flex;
+        align-items: center;
+        background: $unnamed-color;
+    }
+    .categoryBorder{
+        border-bottom: 5px solid $darkBlue-color;
+        width: 26%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
     .colorbox {
-        width: 73%;
-        height: 141px;
-        padding-top: 117px;
-        padding-left: 128px;
+        // width: 73%;
+        // height: 141px;
+        width: 100%;
+        text-align: center;
+        // padding-top: 117px;
+        // padding-left: 128px;
         font-size: 40px;
         background-color: $unnamed-color;
         color: $white-color;

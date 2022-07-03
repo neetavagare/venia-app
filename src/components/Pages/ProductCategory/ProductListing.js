@@ -7,7 +7,6 @@ import Banner from '../../../images/Product_Images/Banner.png';
 import { Link } from 'react-router-dom';
 import Box from "../../atoms/Box/Box";
 import { Image } from "../../atoms";
-import { Paragraph } from '../../atoms';
 import { Anchor } from '../../atoms';
 
 
@@ -22,12 +21,17 @@ export default function ProductListing(props) {
                             <Image alt={""} url={Banner} classValue="mobileimg"></Image>
                         </div>
                         <div className="blackbox">
-                            Women's Outerwear
+                            <div>Women's Outerwear </div>
+                            <div className="categoryBorder">
+                            </div>
                         </div>
+
+
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12 mobileHide ">
+                    <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12 mobileHide black-image-div">
                         <div className="colorbox">
-                            Women’s
+                            <div>Women’s</div>
+                            <div className="categoryBorder"></div>
                         </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12 mobileHide">
@@ -35,7 +39,7 @@ export default function ProductListing(props) {
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 deskTopHide catagories">
-                    <div style={{paddingLeft:10}}>
+                    <div style={{ paddingLeft: 10 }}>
                         <Anchor classValue="cursor-pointer"><Label name="Clothing" className="catagory1">
                         </Label>/</Anchor>
                         <Anchor classValue="cursor-pointer"><Label name="Women's" className="catagory2">
@@ -67,7 +71,7 @@ export default function ProductListing(props) {
                     {/* Results Are working. */}
 
                     <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--12">
-                        <div className="results">Results  {props.data?.length ?? 0}</div>
+                        <div className="results">  {props.data?.length ?? 0} Results</div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8 mobileHide">
                         <div>
@@ -92,7 +96,7 @@ export default function ProductListing(props) {
                         <div>
                             {
                                 SizeFilter.map((item, index) => (
-                                    <React.Fragment key={"ch"+index}>
+                                    <React.Fragment key={"ch" + index}>
                                         <div>
                                             <CheckBox type="checkbox" />
                                             <span className={Filters[0].className}>{item.text}</span>
@@ -104,7 +108,7 @@ export default function ProductListing(props) {
                             <div className="filter">Style</div>
                             {
                                 StylesFilter.map((item, index) => (
-                                    <React.Fragment key={"fl"+index}>
+                                    <React.Fragment key={"fl" + index}>
                                         <div>
                                             <CheckBox type="checkbox" />
                                             <span className={Filters[0].className}>{item.text}</span>
@@ -115,13 +119,13 @@ export default function ProductListing(props) {
                             <div className="filter">Color</div>
                             {
                                 ColorFilter.map((item, index) => (
-                                    <Box key={"flt"+index} background={item.text} />
+                                    <Box key={"flt" + index} background={item.text} />
                                 )
                                 )}
                             <div className="filter">Brand</div>
                             {
                                 BrandFilter.map((item, index) => (
-                                    <React.Fragment key={"ftr"+index}>
+                                    <React.Fragment key={"ftr" + index}>
                                         <div>
                                             <CheckBox type="checkbox" />
                                             <span className={Filters[0].className}>{item.text}</span>

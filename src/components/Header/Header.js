@@ -26,12 +26,12 @@ function Header(props) {
     return (
         <header className='aem-Grid aem-Grid--12 headerborder mobileHide'> 
             <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
-                <Link to={"/"} ><Anchor><Image alt={""} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
+                <Link to={"/"}  ><Anchor><Image alt={""} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
                 {
                     HeaderLabels.manuItems.map((item) => {
-                        return <Anchor classValue="cursor-pointer"><Label key={item.label} name={item.label} classValue={item.className}></Label></Anchor>
+                        return  <Link className="decorationNone" to={"/"} ><Anchor classValue="cursor-pointer"><Label key={item.label} name={item.label} classValue={item.className}></Label></Anchor></Link>
                     })
                 }
             </div>
