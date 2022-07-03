@@ -20,17 +20,17 @@ import { ColorFilter, SizeFilter, Sizes } from '../../../config/Constant';
 import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
-import { Anchor, Image, Paragraph,ProductGallery } from "../../atoms";
+import { Anchor, Button, Image, Paragraph, ProductGallery } from "../../atoms";
 
 
 
 function ProductDetails(props) {
 
     const { id } = useParams();
-    const [count, setcount] = useState(0);
+    const [count, setcount] = useState(1);
     console.log(props.productData);
     let navigate = useNavigate();
-    let [images,setImages] = useState(null);
+    let [images, setImages] = useState(null);
     useState(async () => {
         props.showLoader();
         var data = await ProductService.getProduct(id);
@@ -85,7 +85,7 @@ function ProductDetails(props) {
                     <h2 className="peekbag">{props.productData.title}</h2>
                     <div className="detailprice">${props.productData.price}</div>
                     <div className="starIcon">
-                        <RatingStar count={props.productData?.rating?.rate}></RatingStar><span> ({props.productData?.rating?.count}) </span>
+                        <RatingStar count={props.productData?.rating?.rate}></RatingStar><span className="startCount"> ({props.productData?.rating?.count}) </span>
                     </div>
                     <div className="loreamdetail">{props.productData.description?.substring(0, 100)}.
                         <span>
@@ -111,7 +111,7 @@ function ProductDetails(props) {
                         {/* <p className="quantity">Quantity</p> */}
                         <Paragraph classValue="quantity" name="Quantity"></Paragraph>
                         <div className="incrementbtn">
-                            <button onClick={() => {
+                            <Button onClick={() => {
                                 if (count <= 0) {
                                     //setcount(0)
                                     props.getProductsCountSuccess(count + 1);
@@ -120,22 +120,22 @@ function ProductDetails(props) {
                                     props.getProductsCountSuccess(count + 1);
                                 }
                             }}
-                                className="btn-background"
-                            ><Anchor><Icon name="minus" className="minusIcon" > </Icon></Anchor></button>
-                            <button className="quanrbtn" >{count}</button>
-                            <button className="btn-background" onClick={
+                                classValue="btn-background"
+                            ><Anchor><Icon name="minus" className="minusIcon" > </Icon></Anchor></Button>
+                            <Button classValue={"quanrbtn"}>{count}</Button>
+
+                            <Button classValue="btn-background" onClick={
                                 () => {
                                     props.getProductsCountSuccess(count + 1);
                                     setcount(count + 1)
 
                                 }
-                            }><Anchor><Icon name="plus"> </Icon></Anchor></button>
+                            }><Anchor><Icon name="plus"> </Icon></Anchor></Button>
                         </div>
                     </div>
-                    <button className="addbtn" onClick={() => addToCart(props.productData)}>
+                    <Button classValue="addbtn" onClick={() => addToCart(props.productData)}>
                         <span>  add to cart</span>
-
-                    </button>
+                    </Button>
                     <div className="svgIcon">
                         <span className="saveIcon">
                             <Anchor><Icon name="hurt"></Icon></Anchor>

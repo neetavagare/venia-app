@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../atoms/Icon/Icon";
 import ppbtn from '../../../images/Product_Images/ppbtn.png';
-import { Image } from '../../atoms';
+import { Button, Image } from '../../atoms';
 // Pricing Summery Component and it's working.
 export default function PricingSummery(props) {
     return (
@@ -25,14 +25,16 @@ export default function PricingSummery(props) {
                     <div className="total">${props.totalPrice}</div>
                 </div>
             </div>
-            <div className="aem-Grid aem-Grid--12 btnicon">
-                <div>
-                    <Icon name="lock"> </Icon>
-                    checkout
-                </div>
+            <div className="aem-Grid aem-Grid--12 textAlignCenter">
+                <Button classValue="checkoutbtn">
+                    <span> <Icon name="lock"> </Icon>  checkout</span>
+                </Button>
             </div>
-            <div className="aem-Grid aem-Grid--12" >
-                <Image alt={'Payplay'} url={ppbtn} classValue="paypalbtn"></Image>
+            <div className="aem-Grid aem-Grid--12 textAlignCenter" >
+                <Button classValue="paypal-exp">
+                    <Image alt={'Payplay'} url={ppbtn} classValue="paypalbtn"></Image>
+                </Button>
+
             </div>
         </React.Fragment>
     )

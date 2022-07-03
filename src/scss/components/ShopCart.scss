@@ -72,7 +72,7 @@
 
 }
 
-.pricingborder {
+.pricingSection {
     border: 1px solid $border-color;
     padding: 20px 10px;
     @include ptitle;
@@ -103,31 +103,43 @@
 
     .total {
         @include pricingpadding;
+        @include boldFont
     }
 
     .pricing {
         text-align: end;
     }
+    .textAlignCenter{
+        @include textCenter;
+    }
+    .lock{
+        color: $white-color; 
+      }
+      
+      .checkoutbtn {
+          margin-top: 10px;
+          text-align: center;
+          color: $white-color;
+          text-transform: uppercase;
+          font-size: 14px;
+          padding: 8px;
+          width: 80%;
+          border: none;
+          border-radius: 28px;
+          background-color: $primary-brand;
+      }
+      
+      .paypal-exp{
+          margin-top: 20px;
+          width: 80%;
+          border: none;
+          padding: 0;
+          background: transparent;
 
+          .paypalbtn{
+            width: 100%;
+          }
+      }
 
 }
 
-.lock{
-  color: $white-color; 
-}
-
-.btnicon {
-    margin-top: 10px;
-    text-align: center;
-    color: $white-color;
-    text-transform: uppercase;
-    font-size: 14px;
-    height: 35px;
-    border-radius: 28px;
-    background-color: $primary-brand;
-}
-
-.paypalbtn{
-    padding-top: 10px;
-    width: 100%;
-}

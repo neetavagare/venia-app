@@ -131,3 +131,10 @@
 @mixin cursor {
     cursor: pointer;
 }
+@mixin boldFont {
+     font-weight: bold;   
+}
+
+@mixin textCenter {
+    text-align: center;   
+}

@@ -12,7 +12,7 @@ import Loader from "../../atoms/Loader/Loader";
 import LocalService from "../../../services/LocalService/LocalService";
 import PricingSummery from './PricingSummery';
 import Helper from "../../../helper/Helper";
-import { Image, Paragraph } from "../../atoms";
+import { Button, Image, Paragraph } from "../../atoms";
 import { Link } from 'react-router-dom';
 
 function ShopingCart(props) {
@@ -35,7 +35,7 @@ function ShopingCart(props) {
         LocalService.removeProductCart(item);
         let cartItems = LocalService.getCart();
         props.replaceCart(cartItems);
-        Helper.showToastMessage("Removed Product from Bag",true);
+        Helper.showToastMessage("Removed Product from Bag", true);
     }
 
     return (
@@ -44,7 +44,7 @@ function ShopingCart(props) {
             <Banner />
 
             {/* Cart Page If we add item It will shown on cart page. */}
-            
+
             <div className='aem-Grid aem-Grid--12'>
                 <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12' >
                     {
@@ -60,11 +60,10 @@ function ShopingCart(props) {
                                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11' >
                                     <div className="aem-Grid aem-Grid--4">
                                         <div className='aem-GridColumn aem-GridColumn--default--2 img_box'>
-                                        <Image alt={item.title} url={item.image} classValue="image"></Image>
-
+                                            <Image alt={item.title} url={item.image} classValue="image"></Image>
                                         </div>
                                         <div className='aem-GridColumn aem-GridColumn--default--2 details'>
-                                        <Link to={"/product/"+item.id} className="title-link"> <Paragraph name={title} classValue={'title'}></Paragraph>  </Link>
+                                            <Link to={"/product/" + item.id} className="title-link"> <Paragraph name={title} classValue={'title'}></Paragraph>  </Link>
                                             {/* <p className="title">  {title}</p> */}
                                             <div className="size"> Size : {item.size}</div>
                                             <div className="color"> Color : {item.color}</div>
@@ -77,7 +76,7 @@ function ShopingCart(props) {
                                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11'>
                                     <div className='aem-GridColumn aem-GridColumn--default--2 cart_button button'>
                                         <Icon name="minus"> </Icon>
-                                        <button className="btn1">2</button>
+                                        <Button classValue="btn1">2</Button>
                                         <Icon name="plus"> </Icon>
                                     </div>
                                 </div>
@@ -111,9 +110,9 @@ function ShopingCart(props) {
 
                 </div>
 
-                  {/* Pricing summery tabel Component */}
+                {/* Pricing summery tabel Component */}
 
-                <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 pricingborder">
+                <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 pricingSection">
                     <PricingSummery totalPrice={totalPrice}> </PricingSummery>
                 </div>
             </div>
