@@ -1,14 +1,13 @@
 import React from "react";
-import { Filters, SizeFilter, BrandFilter, StylesFilter, ColorFilter } from "../../../config/Constant";
-import Label from '../../atoms/Label/Label';
-import CheckBox from "../../atoms/CheckBox/CheckBox";
 import Icon from "../../atoms/Icon/Icon";
 import Banner from '../../../images/Product_Images/Banner.png';
-import { Link } from 'react-router-dom';
-import Box from "../../atoms/Box/Box";
-import { Image } from "../../atoms";
+import { DropDown, Image } from "../../atoms";
 import { Anchor } from '../../atoms';
-
+import ProductItem from "./ProductItem";
+import CategoryLabel from "./CategoryLabel";
+import CategoryLabelMobile from "./CategoryLabelMobile";
+import FiltersComponent from './FiltersComponent';
+import { DropDownOptions } from "../../../config/Constant";
 
 export default function ProductListing(props) {
     return (
@@ -25,8 +24,6 @@ export default function ProductListing(props) {
                             <div className="categoryBorder">
                             </div>
                         </div>
-
-
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12 mobileHide black-image-div">
                         <div className="colorbox">
@@ -39,14 +36,7 @@ export default function ProductListing(props) {
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 deskTopHide catagories">
-                    <div style={{ paddingLeft: 10 }}>
-                        <Anchor classValue="cursor-pointer"><Label name="Clothing" className="catagory1">
-                        </Label>/</Anchor>
-                        <Anchor classValue="cursor-pointer"><Label name="Women's" className="catagory2">
-                        </Label>/</Anchor>
-                        <Anchor classValue="cursor-pointer"><Label name="Outerwear" className="catagory3">
-                        </Label></Anchor>
-                    </div>
+                    <CategoryLabel></CategoryLabel>
                 </div>
                 <div className="aem-Grid aem-Grid--4 deskTopHide">
                     <div className="aem-GridColumn aem-GridColumn--phone--2 slider">
@@ -63,9 +53,7 @@ export default function ProductListing(props) {
                 </div>
                 <div className="aem-Grid aem-Grid--12 catagory">
                     <div className="aem-GridColumn aem-GridColumn--default--3 mobileHide">
-                        <Anchor classValue="cursor-pointer"><span className="clothing">Clothing/</span></Anchor>
-                        <Anchor classValue="cursor-pointer"><span className="women">Women’s/</span></Anchor>
-                        <Anchor classValue="cursor-pointer"><span className="outwear">Outerwear</span></Anchor>
+                        <CategoryLabelMobile></CategoryLabelMobile>
                     </div>
 
                     {/* Results Are working. */}
@@ -75,13 +63,7 @@ export default function ProductListing(props) {
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8 mobileHide">
                         <div>
-                            <select className="dropdownn" onChange={props.sortByCategory}>
-                                <option value="0">Sort by Latest </option>
-                                <option value="women's clothing">Women</option>
-                                <option value="men's clothing">Men</option>
-                                <option value="jewelery">Jwellery</option>
-                                <option value="electronics">Electronics</option>
-                            </select>
+                            <DropDown classValue="dropdownn" options={DropDownOptions} onChange={props.sortByCategory}></DropDown>
                         </div>
                     </div>
 
@@ -93,48 +75,7 @@ export default function ProductListing(props) {
                     <div className="filtertitle">Filters</div>
                     <div className="filter">Size</div>
                     <div className="aem-Grid aem-Grid--3">
-                        <div>
-                            {
-                                SizeFilter.map((item, index) => (
-                                    <React.Fragment key={"ch" + index}>
-                                        <div>
-                                            <CheckBox type="checkbox" />
-                                            <span className={Filters[0].className}>{item.text}</span>
-                                        </div>
-
-                                    </React.Fragment>
-                                )
-                                )}
-                            <div className="filter">Style</div>
-                            {
-                                StylesFilter.map((item, index) => (
-                                    <React.Fragment key={"fl" + index}>
-                                        <div>
-                                            <CheckBox type="checkbox" />
-                                            <span className={Filters[0].className}>{item.text}</span>
-                                        </div>
-                                    </React.Fragment>
-                                )
-                                )}
-                            <div className="filter">Color</div>
-                            {
-                                ColorFilter.map((item, index) => (
-                                    <Box key={"flt" + index} background={item.text} />
-                                )
-                                )}
-                            <div className="filter">Brand</div>
-                            {
-                                BrandFilter.map((item, index) => (
-                                    <React.Fragment key={"ftr" + index}>
-                                        <div>
-                                            <CheckBox type="checkbox" />
-                                            <span className={Filters[0].className}>{item.text}</span>
-                                        </div>
-                                    </React.Fragment>
-                                )
-                                )}
-                            <div className="filterborder"></div>
-                        </div>
+                        <FiltersComponent></FiltersComponent>
                     </div>
                 </div>
 
@@ -146,12 +87,7 @@ export default function ProductListing(props) {
                         {
                             props.data && props.data.map((item) => {
                                 return <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6" key={item.id}>
-                                    <div className="productItem">
-                                        <div className="productMainImage"> <Image alt={""} url={item.image} classValue="productimage"></Image></div>
-                                        <Link to={"/product/" + item.id} className="product-anc" ><p className="producttitle">{item.title.substring(0, 16)}</p></Link>
-                                        <div className="productprice">${item.price}</div>
-                                        <div className="ProductIcon"><Anchor><Icon name="hurt"> </Icon></Anchor></div>
-                                    </div>
+                                    <ProductItem item={item}></ProductItem>
                                 </div>
                             })
                         }

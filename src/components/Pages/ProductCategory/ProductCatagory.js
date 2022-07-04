@@ -15,12 +15,12 @@ function ProductCatagory(props) {
 
   useState(async () => {
     props.showLoader()
-    var products = await ProductService.getCategory().catch((e)=>{
+    var products = await ProductService.getCategory().catch((e) => {
       props.hideLoader();
-      Helper.showToastMessage("Something went wrong. Please try again")  
+      Helper.showToastMessage("Something went wrong. Please try again")
     });
     props.getCategoryProducts(products)
-    props.sortProduct(products?.slice(0, pageSize)?? [])
+    props.sortProduct(products?.slice(0, pageSize) ?? [])
     props.hideLoader()
   }, [])
 

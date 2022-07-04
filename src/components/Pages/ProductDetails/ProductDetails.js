@@ -21,6 +21,7 @@ import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
 import { Anchor, Button, Image, Paragraph, ProductGallery } from "../../atoms";
+import CategoryLabelMobile from "../ProductCategory/CategoryLabelMobile";
 
 
 
@@ -78,9 +79,7 @@ function ProductDetails(props) {
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
                     <div className="catagary">
-                        <Anchor classValue="cursor-pointer"><span className="catagory1">Clothing/</span></Anchor>
-                        <Anchor classValue="cursor-pointer"><span className="catagory2">Women’s/</span></Anchor>
-                        <Anchor classValue="cursor-pointer"><span className="catagory3">Outerwear</span></Anchor>
+                        <CategoryLabelMobile></CategoryLabelMobile>
                     </div>
                     <h2 className="peekbag">{props.productData.title}</h2>
                     <div className="detailprice">${props.productData.price}</div>
