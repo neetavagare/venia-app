@@ -24,8 +24,21 @@
 
 .header_text {
     font-family: Mulish;
+    display: flex;
+    justify-content: center;
     padding-top: 16px;
     font-size: 16px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        line-height: inherit;
+    }
 
     .text1 {
         @include texts;
@@ -50,6 +63,18 @@
     font-family: Mulish;
     text-align: end;
     padding-top: 16px;
+
+    ul {
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        line-height: inherit;
+    }
 
     .text5 {
         @include textss;

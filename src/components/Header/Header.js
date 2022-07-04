@@ -29,22 +29,23 @@ function Header(props) {
                 <Link to={"/"}  ><Anchor><Image alt={""} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
-                {
-                    HeaderLabels.manuItems.map((item) => {
-                        return <Link className="decorationNone cursor-pointer" to={"/"} ><Label key={item.label} name={item.label} classValue={item.className}></Label></Link>
-                    })
-                }
+                <ul>
+                    {
+                        HeaderLabels.manuItems.map((item) => {
+                            return <li><Link className="decorationNone cursor-pointer" to={"/"} ><Label key={item.label} name={item.label} classValue={item.className}></Label></Link></li>
+                        })
+                    }
+                </ul>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
-                <div>
-                    <Anchor> <Icon name="Search"> </Icon></Anchor>
-                    <Anchor><Label name="Search" className="text5">
-                    </Label></Anchor>
-                    <Anchor><Icon name="User" /></Anchor>
-                    <span><Anchor><Label name="Sign in" className="text6"></Label></Anchor> </span>
-                    <Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span>  </Link>
+                <ul>
+                    <li><Anchor> <Icon name="Search"> </Icon></Anchor></li>
+                    <li><Anchor><Label name="Search" className="text5"></Label></Anchor></li>
+                    <li><Anchor><Icon name="User" /></Anchor></li>
+                    <li><span><Anchor><Label name="Sign in" className="text6"></Label></Anchor> </span></li>
+                    <li><Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span></Link></li>
 
-                </div>
+                </ul>
             </div>
         </header>
 

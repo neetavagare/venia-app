@@ -3,7 +3,7 @@ import Anchor from '../atoms/Anchor/Anchor';
 import Icon from '../atoms/Icon/Icon';
 import {Paragraph} from '../atoms';
 
-export default function Footer_content() {
+export default function FooterContent() {
     return (
         <footer className='footerborder'>
             <div className='aem-Grid aem-Grid--12'>

@@ -4,27 +4,28 @@ import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import './scss/main.scss';
 import { ProductDetails, ProductCatagory, ShopingCart } from './components/Pages';
 import MobileHeader from './components/Header/MobileHeader';
-import Footer_content from './components/Footer/Footer_content';
+import FooterContent from './components/Footer/FooterContent';
 import Footer from './components/Footer/Footer';
 import ToastMessage from './components/atoms/ToastMessage/ToastMessage';
-
+import { HashRouter } from 'react-router-dom';
 function App() {
   return (
     <div className='container'>
-      <BrowserRouter>
+      <HashRouter>
+
         <MobileHeader />
         <Header />
         <ToastMessage time={8000}></ToastMessage>
         {/* <main> */}
-          <Routes>
-            <Route exact path="/" element={<ProductCatagory />} />
-            <Route exact path="/cart" element={<ShopingCart />} />
-            <Route exact path="/product/:id" element={<ProductDetails />} />
-          </Routes>
+        <Routes>
+          <Route exact path="/" element={<ProductCatagory />} />
+          <Route exact path="/cart" element={<ShopingCart />} />
+          <Route exact path="/product/:id" element={<ProductDetails />} />
+        </Routes>
         {/* </main> */}
-      </BrowserRouter>
-      <Footer_content />
-      <Footer/>
+      </HashRouter>
+      <FooterContent />
+      <Footer />
     </div>
   );
 }
