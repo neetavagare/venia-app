@@ -248,51 +248,42 @@ export const BrandFilter = [{
 
 // Color Filter Option
 
-export const ColorFilter = [{
-    text: '#FFFFFF',
+export const ColorFilter = [
+    {
+        text: '#343434',
 
-},
-{
-    text: '#343434',
+    },
+    {
+        text: '#2D9D78 ',
 
-},
-{
-    text: '#2D9D78 ',
+    },
+    {
+        text: '#FDBA5E',
 
-},
-{
-    text: '#797979',
+    },
+    {
+        text: '#6408D3',
 
-}
+    },
+    {
+        text: '#FFFFFF',
+
+    },
     ,
-{
-    text: '#FDBA5E',
+    {
+        text: '#F9009A',
 
-}
-    ,
-{
-    text: '#336DFF',
+    },
+    {
+        text: '#f45c43',
 
-}
-    ,
-{
-    text: '#6408D3',
-
-}
-    ,
-{
-    text: '#F9009A',
-
-},
-{
-    text: '#a8e063',
-
-}
-    ,
-{
-    text: '#f45c43',
-
-}
+    },
+    {
+        text: '#1F39FF'
+    },
+    {
+        text: '#EB7327'
+    }
 ]
 export const APIBASE_URL = 'https://fakestoreapi.com';
 export const CART_LOCAL_STORAGE_VALUE = "cartsData";
@@ -320,6 +311,6 @@ export const DropDownOptions = [
         value: "electronics",
         name: "Electronics"
     },
-    
+
 
 ]

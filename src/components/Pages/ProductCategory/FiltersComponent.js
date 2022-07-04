@@ -30,7 +30,7 @@ export default function FiltersComponent() {
             <div className="filter">Color</div>
             {
                 ColorFilter.map((item, index) => (
-                    <Box key={"flt" + index} background={item.text} />
+                    <Box key={"flt" + index} background={item.text}/>
                 )
                 )}
             <div className="filter">Brand</div>

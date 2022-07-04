@@ -43,7 +43,7 @@ function Header(props) {
                     <li><Anchor><Label name="Search" className="text5"></Label></Anchor></li>
                     <li><Anchor><Icon name="User" /></Anchor></li>
                     <li><span><Anchor><Label name="Sign in" className="text6"></Label></Anchor> </span></li>
-                    <li><Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span></Link></li>
+                    <li><Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor><span className='cart-count'> {props.carts.length}</span></Link></li>
 
                 </ul>
             </div>
