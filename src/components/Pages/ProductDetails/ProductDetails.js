@@ -158,7 +158,7 @@ function ProductDetails(props) {
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 detailing">
                     <div className="aem-Grid aem-Grid--6 ">
-                        <div className="aem-GridColumn aem-GridColumn--default--3">
+                        <div className="aem-GridColumn aem-GridColumn--default--3 sweatdetailing">
                             <div className="aem-Grid aem-Grid--3 ">
                                 <Paragraph classValue="precaution" name='Details'></Paragraph>
                                 <div className="aem-GridColumn aem-GridColumn--default--1">

@@ -14,7 +14,7 @@ export default function PricingSummery(props) {
                     <div className="gift">Gift Card</div>
                     <div className="tax">Estimated tax</div>
                     <div className="shhipping">Estimated shipping</div>
-                    <div className="total">Estimated Total</div>
+                    <div className="total ">Estimated Total</div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 pricing ">
                     <div className="subtotal">${props.totalPrice ? (props.totalPrice - 5) : 0}</div>
