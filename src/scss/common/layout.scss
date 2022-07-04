@@ -1,8 +1,13 @@
 @import './mixin.scss';
 
+body {
+    margin-top: 0;
+}
+
 .container {
     @include layout;
 }
+
 .boximage {
     display: block;
 }

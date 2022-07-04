@@ -10,7 +10,7 @@ export default function Icon(props) {
         <span>
             {labelName === 'Search' &&
                 <span className='searchI'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26.414" height="26.414" viewBox="0 0 26.414 26.414" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 26.414 26.414" >
                         <g id="search" transform="translate(-2 -2)">
                             <circle id="Ellipse_153" data-name="Ellipse 153" cx="11" cy="11" r="11" transform="translate(3 3)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                             <line id="Line_547" data-name="Line 547" x1="4.35" y1="4.35" transform="translate(22.65 22.65)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -22,7 +22,7 @@ export default function Icon(props) {
 
             {labelName === 'User' &&
                 <span className='user'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="23.333" height="24" viewBox="0 0 23.333 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23.333 24">
                         <g id="user" transform="translate(-3 -2)">
                             <path id="Path_38138" data-name="Path 38138" d="M25.333,23V20.333A5.333,5.333,0,0,0,20,15H9.333A5.333,5.333,0,0,0,4,20.333V23" transform="translate(0 2)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                             <circle id="Ellipse_176" data-name="Ellipse 176" cx="5" cy="5" r="5" transform="translate(9.333 3)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -34,7 +34,7 @@ export default function Icon(props) {
             {labelName === 'ShopBag' &&
                 <span className='shoppingbag'>
                     {/* <h1>{count}</h1> */}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 22">
                         <g id="shopping-bag" transform="translate(-2 -1)">
                             <path id="Path_38093" data-name="Path 38093" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                             <line id="Line_555" data-name="Line 555" x2="18" transform="translate(3 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />

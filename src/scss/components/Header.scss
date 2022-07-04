@@ -4,7 +4,7 @@
 
 .headerborder {
     @include headfootborder;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     background: #fff 0 0 no-repeat padding-box;
     border-bottom: 1px solid $grey-M1-color;
     margin: 0 auto;
