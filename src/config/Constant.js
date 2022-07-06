@@ -62,6 +62,7 @@ export const HeaderIcons = {
     Slider: 'slider',
     Uparrow: 'uparrow',
     Downarrow: 'down-arrow',
+    Cross: 'cross',
 }
 
 // Shop-Bag Carousel

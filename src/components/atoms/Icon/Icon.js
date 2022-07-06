@@ -33,7 +33,6 @@ export default function Icon(props) {
             }
             {labelName === 'ShopBag' &&
                 <span className='shoppingbag'>
-                    {/* <h1>{count}</h1> */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 22">
                         <g id="shopping-bag" transform="translate(-2 -1)">
                             <path id="Path_38093" data-name="Path 38093" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -209,12 +208,22 @@ export default function Icon(props) {
                     </svg>
                 </span>
             }
-            {labelName ==='down-arrow' &&
+            {labelName === 'down-arrow' &&
                 <span className='down-arrow'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="10.802" height="15.287" viewBox="0 0 10.802 15.287">
                         <g id="arrow-down" transform="translate(1.401)">
                             <path id="Path_38195" data-name="Path 38195" d="M0,1V14" transform="translate(4)" fill="none" stroke="#172026" stroke-linecap="round" stroke-width="2" />
                             <path id="Path_37884" data-name="Path 37884" d="M5,5l4,5.287L13,5" transform="translate(-5 4)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                        </g>
+                    </svg>
+                </span>
+            }
+            { labelName === 'cross' &&
+                <span className='cross'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.828" viewBox="0 0 14.828 14.828">
+                        <g id="x" transform="translate(-4.586 -4.586)">
+                            <line id="Line_624" data-name="Line 624" x1="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_625" data-name="Line 625" x2="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>

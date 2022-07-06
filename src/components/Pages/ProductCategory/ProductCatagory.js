@@ -45,7 +45,9 @@ function ProductCatagory(props) {
 
     e.currentTarget.classList.add('selectedColor')
     let filterData = props.products.slice((item - 1) * pageSize, item * pageSize);
-    props.sortProduct(filterData);
+    props.sortProduct(filterData); 
+    window.scrollTo(0, 0)
+
   }
 
   let data = props.sortedProducts.length > 0 ? props.sortedProducts : props.products
