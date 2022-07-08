@@ -3,10 +3,11 @@ import Anchor from '../atoms/Anchor/Anchor';
 import Icon from '../atoms/Icon/Icon';
 import {Paragraph} from '../atoms';
 
+
 export default function FooterContent() {
     return (
         <footer className='footerborder'>
-            <div className='aem-Grid aem-Grid--12'>
+            <div className='aem-Grid aem-Grid--12 footerbanner'>
                 <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12'>
                     <Anchor><h6 className='about'>About Us</h6></Anchor>
                     <Anchor><Paragraph classValue ='ftext3' name = 'Our Story'></Paragraph></Anchor>

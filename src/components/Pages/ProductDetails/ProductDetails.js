@@ -132,18 +132,22 @@ function ProductDetails(props) {
                             }><Anchor><Icon name="plus"> </Icon></Anchor></Button>
                         </div>
                     </div>
-                    <Button classValue="addbtn" onClick={() => addToCart(props.productData)}>
-                        <span>  add to cart</span>
-                    </Button>
-                    <div className="svgIcon">
-                        <span className="saveIcon">
-                            <Anchor><Icon name="hurt"></Icon></Anchor>
-                            <Anchor><span className="saving">Save</span></Anchor>
-                        </span>
-                        <span>
-                            <Anchor><Icon name="share-2"> </Icon></Anchor>
-                            <Anchor><span className="sharing">Share</span></Anchor>
-                        </span>
+                    <div className="addtocartbtn">
+                        <Button classValue="addbtn" onClick={() => addToCart(props.productData)}>
+                            <span>  add to cart</span>
+                        </Button>
+                    </div>
+                    <div className="svgicontext">
+                        <div className="svgIcon">
+                            <span className="saveIcon">
+                                <Anchor><Icon name="hurt"></Icon></Anchor>
+                                <Anchor><span className="saving">Save</span></Anchor>
+                            </span>
+                            <span>
+                                <Anchor><Icon name="share-2"> </Icon></Anchor>
+                                <Anchor><span className="sharing">Share</span></Anchor>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,6 +162,7 @@ function ProductDetails(props) {
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 detailing">
                     <div className="aem-Grid aem-Grid--6 ">
+                        {/* <Paragraph classValue="detailss deskTopHide" name='Details'></Paragraph> */}
                         <div className="aem-GridColumn aem-GridColumn--default--3 sweatdetailing">
                             <div className="aem-Grid aem-Grid--3 ">
                                 <Paragraph classValue="precaution" name='Details'></Paragraph>

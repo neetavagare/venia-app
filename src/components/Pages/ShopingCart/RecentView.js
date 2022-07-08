@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { RecentViewdata } from "../../../config/Constant";
 import { Image } from "../../atoms";
 
- // Recent view slider Carousel Component
+// Recent view slider Carousel Component
 
 export default class RecentView extends Component {
     render() {

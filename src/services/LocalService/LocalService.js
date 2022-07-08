@@ -24,11 +24,11 @@ export default class LocalService {
             let data = JSON.parse(cartData);
             if (data.length > 0) {
                 data.push(Product)
-            }else{
+            } else {
                 data[0] = Product;
             }
             localStorage.setItem(CART_LOCAL_STORAGE_VALUE, JSON.stringify(data));
-        }else{
+        } else {
             let data = [];
             data.push(Product)
             localStorage.setItem(CART_LOCAL_STORAGE_VALUE, JSON.stringify(data));

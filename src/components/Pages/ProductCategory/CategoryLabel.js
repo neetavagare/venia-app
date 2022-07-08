@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor, Label} from '../../atoms';
+import { Anchor, Label } from '../../atoms';
 
 export default function CategoryLabel() {
     return (

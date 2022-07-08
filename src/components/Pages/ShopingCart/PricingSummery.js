@@ -2,7 +2,11 @@ import React from "react";
 import Icon from "../../atoms/Icon/Icon";
 import ppbtn from '../../../images/Product_Images/ppbtn.png';
 import { Button, Image } from '../../atoms';
+
+
 // Pricing Summery Component and it's working.
+
+
 export default function PricingSummery(props) {
     return (
         <React.Fragment>

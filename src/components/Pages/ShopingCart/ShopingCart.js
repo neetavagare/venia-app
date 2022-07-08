@@ -2,7 +2,6 @@ import React from "react";
 import { CART_EMPTY_MESSAGE } from "../../../config/Constant";
 import Icon from '../../atoms/Icon/Icon';
 import Banner from "./Banner";
-
 import RecentView from "./RecentView";
 import Estimaterow from './Estimaterow';
 import { connect } from "react-redux";
@@ -14,6 +13,7 @@ import PricingSummery from './PricingSummery';
 import Helper from "../../../helper/Helper";
 import { Button, Image, Paragraph } from "../../atoms";
 import { Link } from 'react-router-dom';
+
 
 function ShopingCart(props) {
 

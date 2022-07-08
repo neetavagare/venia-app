@@ -14,6 +14,6 @@ export default class ProductService {
 
     static async getCarts() {
         return fetch(`${APIBASE_URL}/carts/1`)
-        .then((res) => res.json())
+            .then((res) => res.json())
     }
 }

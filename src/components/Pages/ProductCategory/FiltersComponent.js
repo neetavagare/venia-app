@@ -1,7 +1,8 @@
-
-import { CheckBox,Box } from '../../atoms';
+import { CheckBox, Box } from '../../atoms';
 import React from 'react';
 import { Filters, SizeFilter, BrandFilter, StylesFilter, ColorFilter } from "../../../config/Constant";
+
+
 export default function FiltersComponent() {
     return (
         <div>
@@ -16,6 +17,9 @@ export default function FiltersComponent() {
                     </React.Fragment>
                 )
                 )}
+            <div className='showmore'>
+                Show more
+            </div>
             <div className="filter">Style</div>
             {
                 StylesFilter.map((item, index) => (
@@ -30,7 +34,7 @@ export default function FiltersComponent() {
             <div className="filter">Color</div>
             {
                 ColorFilter.map((item, index) => (
-                    <Box key={"flt" + index} background={item.text}/>
+                    <Box key={"flt" + index} background={item.text} />
                 )
                 )}
             <div className="filter">Brand</div>

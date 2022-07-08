@@ -270,7 +270,7 @@ export const ColorFilter = [
         text: '#FFFFFF',
 
     },
-    ,
+
     {
         text: '#F9009A',
 

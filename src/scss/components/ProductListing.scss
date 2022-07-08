@@ -50,6 +50,7 @@
         // width: 80%;
         margin-left: 10px;
         margin-right: 10px;
+
         img {
             position: absolute;
             top: 0;
@@ -117,6 +118,11 @@
         color: $grey-M1-color;
     }
 
+    .showmore {
+        padding-top: 10px;
+        text-decoration: underline;
+    }
+
     .filtertitle {
         font-size: 16px;
         font-weight: bolder;
@@ -156,19 +162,21 @@
 .boximg {
     margin-top: 25px;
     display: flex;
-   
-    .black-image-div{
+
+    .black-image-div {
         display: flex;
         align-items: center;
         background: $unnamed-color;
     }
-    .categoryBorder{
+
+    .categoryBorder {
         border-bottom: 5px solid $darkBlue-color;
         width: 26%;
         text-align: center;
         margin: 0 auto;
         margin-top: 30px;
     }
+
     .colorbox {
         // width: 73%;
         // height: 141px;

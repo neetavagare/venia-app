@@ -4,9 +4,10 @@ import { ProductService } from "../../../services/ProductService";
 import { connect } from "react-redux";
 import { getCategoryProducts, hideLoader, showLoader, sortProduct } from "../../../redux/actions";
 import Loader from "../../atoms/Loader/Loader";
-
 import Pagination from "./Pegination";
 import Helper from "../../../helper/Helper";
+
+
 
 function ProductCatagory(props) {
 

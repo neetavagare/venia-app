@@ -1,10 +1,10 @@
 const initialState = {
-    products:[],
-    count:0,
-    isLoading : false,
-    productData : {},
+    products: [],
+    count: 0,
+    isLoading: false,
+    productData: {},
     carts: [],
-    sortedProducts:[]
+    sortedProducts: []
 }
 
 export default initialState;
