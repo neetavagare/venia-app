@@ -21,12 +21,12 @@ export default function PricingSummery(props) {
                     <div className="total ">Estimated Total</div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 pricing ">
-                    <div className="subtotal">${props.totalPrice ? (props.totalPrice - 5) : 0}</div>
+                    <div className="subtotal">${props.totalPrice ? (props.totalPrice ) : 0}</div>
                     <div className="coupen">0</div>
                     <div className="gift">${props.totalPrice ? 5 : 0}</div>
                     <div className="tax">0</div>
                     <div className="shhipping">FREE</div>
-                    <div className="total">${props.totalPrice}</div>
+                    <div className="total">${props.totalPrice ? (props.totalPrice - 5) : 0}</div>
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12 textAlignCenter">

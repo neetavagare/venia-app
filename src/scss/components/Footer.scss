@@ -1,4 +1,4 @@
-@import '../partials/variables';
+@import '../partials/variables.scss';
 @import '../common/mixin.scss';
 
 .footerrow {
@@ -68,6 +68,7 @@
             text-decoration: underline;
             list-style: none;
             color: $grey-dark;
+            @include cursor;
         }
     }
 

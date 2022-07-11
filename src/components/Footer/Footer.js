@@ -9,10 +9,11 @@ export default function Footer() {
 
       <div className="aem-Grid aem-Grid--12 footer-bottom">
         <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
-          <Anchor tabindex = "0">
+          <Anchor tabindex="0">
             <figure>
-              <Image alt={""} url={DesktopBanner} classValue="footerbanner" ></Image></figure></Anchor>
-
+              <Image alt={""} url={DesktopBanner} classValue="footerbanner" ></Image>
+              </figure>
+            </Anchor>
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 copyright" >
           <span className="footerColor">© Company Name Address Ave, City Name, State ZIP</span>
@@ -20,7 +21,7 @@ export default function Footer() {
         <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 left-nav align_center">
           <ul>
             <li>
-              <Anchor tabindex="" href=" ">Terms of Use</Anchor>
+              <Anchor tabindex="" href="">Terms of Use</Anchor>
             </li>
             <li>
               <Anchor tabindex="" href=" ">Privacy Policy</Anchor>

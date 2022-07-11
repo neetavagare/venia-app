@@ -24,10 +24,10 @@ export default function Estimaterow() {
                             Enter a Coupen Code
                         </div>
                         <div className='shippingsummery'>
-                            <span className='mobileHideInline marginRight20'>20% discount applied</span>
+                            <span className='mobileHideInline marginRight20'>$5 discount applied</span>
                             <Anchor><Icon name="downarrow"> </Icon></Anchor>
                         </div>
-                        <div className='deskTopHide'>20% discount applied</div>
+                        <div className='deskTopHide'>$5 discount applied</div>
                     </div>
                     <div className='section3'>
                         <div className='shippingtitle3'>

@@ -69,43 +69,51 @@ export const HeaderIcons = {
 export const RecentViewdata = [
     {
         imageUrl: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
-        title: ' Navy Blue Bag',
+        title: 'Mens Cotton Jacket',
         price: '37.00',
+        id : 3
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
-        title: 'WoMen Top',
+        title: 'MBJ Women Solid',
         price: '70.00',
+        id : 18
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
-        title: ' Mens T-shirt',
+        title: ' Mens Casual Slim',
         price: '90.00',
+        id : 4
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg',
         title: 'Women T-shirt',
         price: '120.00',
+        id : 19
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-        title: ' Women Braclet',
+        title: ' John Hardy Women',
         price: '200.00',
+        id : 5
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg',
         title: 'Silver Ring',
         price: '90.00',
+        id : 7
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg',
         title: 'Acer LED',
         price: '200.00',
+        id : 13,
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
         title: 'Men T-shirt',
         price: '140.00',
+        id : 2,
     }
 ]
 
@@ -293,6 +301,7 @@ export const CART_CHANGE_MESSAGE = "Updated Cart";
 export const LAST_CHANGE_MESSAGE = "Should not remove last quantity.";
 export const PRODUCT_ALREADY_EXITS = "Product is already available in Cart.";
 export const ADDED_PRODUCT_TO_BAG_MESSAGE = "Added Product To Bag";
+export const REMOVED_PRODUCT_FROM_BAG_MESSAGE = "Removed Product from Bag";
 
 export const DropDownOptions = [
     //Header Texts

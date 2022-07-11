@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import { RecentViewdata } from "../../../config/Constant";
 import { Image, Paragraph } from "../../atoms";
+import { Link } from 'react-router-dom';
 
 // Recent view slider Carousel Component
 
@@ -21,9 +22,12 @@ export default class RecentView extends Component {
                     {
                         RecentViewdata.map((item) => {
                             return <div>
-                                <Image alt={item.title} url={item.imageUrl} classValue="viewimges"></Image>
-                                <h5 className="viewtitle">{item.title}</h5>
-                                <Paragraph classValue={'viewprice'} name={"$" +  item.price}></Paragraph>
+
+                                <Link to={"/product/" + item.id} className="link-decoration" >
+                                    <Image alt={item.title} url={item.imageUrl} classValue="viewimges"></Image>
+                                    <h5 className="viewtitle">{item.title}</h5>
+                                    <Paragraph classValue={'viewprice'} name={"$" + item.price}></Paragraph>
+                                </Link>
                             </div>
                         })
                     }

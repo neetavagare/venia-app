@@ -124,6 +124,7 @@
           font-size: 14px;
           padding: 8px;
           width: 80%;
+          @include cursor;
           border: none;
           border-radius: 28px;
           background-color: $primary-brand;
@@ -135,7 +136,7 @@
           border: none;
           padding: 0;
           background: transparent;
-
+          @include cursor;  
           .paypalbtn{
             width: 100%;
           }

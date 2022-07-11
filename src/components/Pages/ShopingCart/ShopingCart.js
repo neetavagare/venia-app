@@ -1,5 +1,5 @@
 import React from "react";
-import { CART_CHANGE_MESSAGE, CART_EMPTY_MESSAGE, LAST_CHANGE_MESSAGE } from "../../../config/Constant";
+import { CART_CHANGE_MESSAGE, CART_EMPTY_MESSAGE, LAST_CHANGE_MESSAGE, REMOVED_PRODUCT_FROM_BAG_MESSAGE } from "../../../config/Constant";
 import Icon from '../../atoms/Icon/Icon';
 import Banner from "./Banner";
 import RecentView from "./RecentView";
@@ -29,11 +29,14 @@ function ShopingCart(props) {
         totalPrice += element.price;
     });
 
-    totalPrice = Math.floor(totalPrice)
+    totalPrice = Math.round(totalPrice)
 
     const removeProduct = (item) => {
         LocalService.removeProductCart(item);
-        updateCart();
+        
+        let cartItems = LocalService.getCart();
+        props.replaceCart(cartItems);
+        Helper.showToastMessage(REMOVED_PRODUCT_FROM_BAG_MESSAGE, true);
     }
 
     const updateCart = () => {

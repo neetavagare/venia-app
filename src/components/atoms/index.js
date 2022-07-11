@@ -8,6 +8,8 @@ import Icon from './Icon/Icon';
 import Label from './Label/Label';
 import CheckBox from './CheckBox/CheckBox';
 import Box from './Box/Box';
+import AnchorV2 from './AnchorV2/AnchorV2';
+
 export {
     Image, Anchor, DropDown, Paragraph,
     ProductGallery,
@@ -15,5 +17,6 @@ export {
     Icon,
     Label,
     CheckBox,
-    Box
+    Box,
+    AnchorV2
 }
