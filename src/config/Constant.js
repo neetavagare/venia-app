@@ -294,7 +294,11 @@ export const DropDownOptions = [
     //Header Texts
     {
         value: "0",
-        name: "Sort by Latest"
+        name: "Sort by Price High to Low"
+    },
+    {
+        value: "1",
+        name: "Sort Price By Low to High"
     },
     {
         value: "women's clothing",

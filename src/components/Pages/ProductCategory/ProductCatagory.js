@@ -25,10 +25,23 @@ function ProductCatagory(props) {
     props.hideLoader()
   }, [])
 
+
   const sortByCategory = (item) => {
-    let filterData = props.products.filter(d => d.category == item.currentTarget.value);
+    let filterData = [...props.products];//props.products.filter(d => d.category == item.currentTarget.value);
+    debugger
+    if (item.currentTarget.value === "1") {
+      filterData = filterData.sort((a, b) => (a.price > b.price ? 1 : -1))
+    } else if (item.currentTarget.value === "0") {
+      filterData = filterData.sort((a, b) => (a.price > b.price ? -1 : 1))
+    } else {
+      filterData = props.products.filter(d => d.category === item.currentTarget.value);
+    }
     props.sortProduct(filterData);
-    if (item.currentTarget.value === "0") {
+
+    if (item.currentTarget.value === "1") {
+      SetShowPagination(true);
+    }
+    else if (item.currentTarget.value === "0") {
       SetShowPagination(true);
     } else {
       SetShowPagination(false);
