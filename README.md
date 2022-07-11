@@ -23,11 +23,13 @@ In the project directory, you can run:
 15. Product Page.
 16. Reusable service for calling external data.
 17. Created reusable components.
-
+18. When you sort the product by category then I have hidden the pagination control. (When you sort by latest product then enabled the pagination)
+19. On Product listing , cart page only title is clickable.
+20. On Add To Cart button I have redirected page to cart page with success message. I have used localstorage to store the cart products. 
 
 ## GitHub hosted URL:
 
 https://neetavagare.github.io/
 
 
-Note : AEM grid is not using flex. It is using display block and float left and float right. It is very difficult to manage layout using AEM Grid. AEM grid should use flex.
+Note : AEM grid is not using flex. It is using display block and float left and float right. 
