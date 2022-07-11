@@ -1,5 +1,4 @@
 import React from "react";
-import HeaderIcons from '../../config/Constant';
 import Icon from "../atoms/Icon/Icon";
 import DesktopBanner from '../../images/Product_Images/DesktopBanner.png';
 import { Link } from 'react-router-dom';

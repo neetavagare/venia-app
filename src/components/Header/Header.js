@@ -1,11 +1,11 @@
 import React from 'react';
 import Label from '../atoms/Label/Label';
-import { HeaderLabels, HeaderIcons } from '../../config/Constant';
+import { HeaderLabels } from '../../config/Constant';
 import Icon from '../atoms/Icon/Icon';
 import { Link } from 'react-router-dom';
 import DesktopBanner from '../../images/Product_Images/DesktopBanner.png';
 import { connect } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { addProductToCart, replaceCart } from "../../redux/actions/index";
 import LocalService from '../../services/LocalService/LocalService';
 import { Image } from "../atoms";
@@ -22,11 +22,10 @@ function Header(props) {
     };
 
     // Header Of all Pages Banner row.
-
     return (
         <header className='aem-Grid aem-Grid--12 headerborder mobileHide'>
             <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
-                <Link to={"/"}  ><Anchor><Image alt={""} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
+                <Link to={"/"}  ><Anchor tabindex=""><Image alt={"Venia APP"} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
                 <ul>

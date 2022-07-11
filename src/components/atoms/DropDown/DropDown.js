@@ -7,8 +7,8 @@ export default function DropDown(props) {
     return (
         <select className={classNm} onChange={props.onChange}>
             {
-                props.options.map(item => {
-                    return <option value={item.value}> {item.name} </option>
+                props.options.map((item,index) => {
+                    return <option key={"in"+index}  value={item.value}> {item.name} </option>
                 })
             }
 

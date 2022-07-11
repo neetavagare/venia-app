@@ -16,7 +16,7 @@ import { useParams } from 'react-router-dom';
 import Loader from "../../atoms/Loader/Loader";
 import RatingStar from '../../atoms/RatingStar/RatingStar';
 import Box from '../../atoms/Box/Box';
-import { ColorFilter, SizeFilter, Sizes } from '../../../config/Constant';
+import { ADDED_PRODUCT_TO_BAG_MESSAGE, ColorFilter, PRODUCT_ALREADY_EXITS, SizeFilter, Sizes } from '../../../config/Constant';
 import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
@@ -56,9 +56,17 @@ function ProductDetails(props) {
             size: SizeFilter[0].text,
             color: ColorFilter[0].text
         };
+        var oldProductCartData = LocalService.getCart();
+        if (oldProductCartData.length) {
+            var isExits = oldProductCartData.filter(d => d.id === product.id);
+            if (isExits.length > 0) {
+                Helper.showToastMessage(PRODUCT_ALREADY_EXITS,true);
+                return;
+            }
+        }
         LocalService.addToCart(productCopy);
         props.addProductToCart(productCopy);
-        Helper.showToastMessage("Added Product To Bag");
+        Helper.showToastMessage(ADDED_PRODUCT_TO_BAG_MESSAGE);
 
         navigate("/cart", { replace: true });
 

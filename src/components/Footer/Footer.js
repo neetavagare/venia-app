@@ -9,7 +9,7 @@ export default function Footer() {
 
       <div className="aem-Grid aem-Grid--12 footer-bottom">
         <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
-          <Anchor>
+          <Anchor tabindex = "0">
             <figure>
               <Image alt={""} url={DesktopBanner} classValue="footerbanner" ></Image></figure></Anchor>
 
@@ -20,10 +20,10 @@ export default function Footer() {
         <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 left-nav align_center">
           <ul>
             <li>
-              <a href=" ">Terms of Use</a>
+              <Anchor tabindex="" href=" ">Terms of Use</Anchor>
             </li>
             <li>
-              <a href=" ">Privacy Policy</a>
+              <Anchor tabindex="" href=" ">Privacy Policy</Anchor>
             </li>
           </ul>
         </div>

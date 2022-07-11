@@ -28,7 +28,6 @@ function ProductCatagory(props) {
 
   const sortByCategory = (item) => {
     let filterData = [...props.products];//props.products.filter(d => d.category == item.currentTarget.value);
-    debugger
     if (item.currentTarget.value === "1") {
       filterData = filterData.sort((a, b) => (a.price > b.price ? 1 : -1))
     } else if (item.currentTarget.value === "0") {

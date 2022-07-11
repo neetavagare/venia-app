@@ -18,6 +18,40 @@ export default class LocalService {
         }
     }
 
+    static incrementCount(product) {
+        let cartData = localStorage.getItem(CART_LOCAL_STORAGE_VALUE);
+        if (cartData) {
+            let data = JSON.parse(cartData);
+            var productsData = [];
+            if (data.length) {
+                data.forEach((item) => {
+                    if (product.id === item.id) {
+                        item.count = product.count + 1;
+                    }
+                    productsData.push(item);
+                })
+            }
+            localStorage.setItem(CART_LOCAL_STORAGE_VALUE, JSON.stringify(productsData));
+        }
+    }
+
+    static decrementCount(product) {
+        let cartData = localStorage.getItem(CART_LOCAL_STORAGE_VALUE);
+        if (cartData) {
+            let data = JSON.parse(cartData);
+            var productsData = [];
+            if (data.length) {
+                data.forEach((item) => {
+                    if (item.id === product.id) {
+                        item.count = product.count - 1;
+                    }
+                    productsData.push(item);
+                })
+            }
+            localStorage.setItem(CART_LOCAL_STORAGE_VALUE, JSON.stringify(productsData));
+        }
+    }
+
     static addToCart(Product) {
         let cartData = localStorage.getItem(CART_LOCAL_STORAGE_VALUE);
         if (cartData) {

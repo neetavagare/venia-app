@@ -1,4 +1,4 @@
-import { CheckBox, Box } from '../../atoms';
+import { CheckBox, Box, Anchor } from '../../atoms';
 import React from 'react';
 import { Filters, SizeFilter, BrandFilter, StylesFilter, ColorFilter } from "../../../config/Constant";
 
@@ -17,9 +17,9 @@ export default function FiltersComponent() {
                     </React.Fragment>
                 )
                 )}
-            <div className='showmore'>
+            <div className='showmore'><Anchor>
                 Show more
-            </div>
+            </Anchor></div>
             <div className="filter">Style</div>
             {
                 StylesFilter.map((item, index) => (

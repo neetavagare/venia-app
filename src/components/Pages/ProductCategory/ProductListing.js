@@ -86,9 +86,9 @@ export default function ProductListing(props) {
 
                     <div className="aem-Grid aem-Grid--12">
                         {
-                            props.data && props.data.map((item) => {
+                            props.data && props.data.map((item,index) => {
                                 return <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6" key={item.id}>
-                                    <ProductItem item={item}></ProductItem>
+                                    <ProductItem item={item} index={index}></ProductItem>
                                 </div>
                             })
                         }

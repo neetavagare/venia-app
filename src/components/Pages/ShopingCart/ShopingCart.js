@@ -1,5 +1,5 @@
 import React from "react";
-import { CART_EMPTY_MESSAGE } from "../../../config/Constant";
+import { CART_CHANGE_MESSAGE, CART_EMPTY_MESSAGE, LAST_CHANGE_MESSAGE } from "../../../config/Constant";
 import Icon from '../../atoms/Icon/Icon';
 import Banner from "./Banner";
 import RecentView from "./RecentView";
@@ -11,7 +11,7 @@ import Loader from "../../atoms/Loader/Loader";
 import LocalService from "../../../services/LocalService/LocalService";
 import PricingSummery from './PricingSummery';
 import Helper from "../../../helper/Helper";
-import { Button, Image, Paragraph } from "../../atoms";
+import { Anchor, Button, Image, Paragraph } from "../../atoms";
 import { Link } from 'react-router-dom';
 
 
@@ -33,10 +33,30 @@ function ShopingCart(props) {
 
     const removeProduct = (item) => {
         LocalService.removeProductCart(item);
+        updateCart();
+    }
+
+    const updateCart = () => {
         let cartItems = LocalService.getCart();
         props.replaceCart(cartItems);
-        Helper.showToastMessage("Removed Product from Bag", true);
+        Helper.showToastMessage(CART_CHANGE_MESSAGE, true);
     }
+
+    const decrementCount = (item) => {
+        if (item.count === 1) {
+            Helper.showToastMessage(LAST_CHANGE_MESSAGE, true);
+            return;
+        }
+
+        LocalService.decrementCount(item);
+        updateCart();
+    }
+
+    const incrementCount = (item) => {
+        LocalService.incrementCount(item);
+        updateCart();
+    }
+
 
     return (
         <section>
@@ -75,9 +95,10 @@ function ShopingCart(props) {
 
                                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11'>
                                     <div className='aem-GridColumn aem-GridColumn--default--2 cart_button button'>
-                                        <Icon name="minus"> </Icon>
-                                        <Button classValue="btn1">2</Button>
-                                        <Icon name="plus"> </Icon>
+
+                                        <Anchor onChange={() => decrementCount(item)}> <Icon name="minus" > </Icon> </Anchor>
+                                        <Button classValue="btn1">{item.count}</Button>
+                                        <Anchor onChange={() => incrementCount(item)}> <Icon name="plus" > </Icon> </Anchor>
                                     </div>
                                 </div>
                                 <div className='aem-GridColumn aem-GridColumn--default--4 trashIcon mobileHide'>
@@ -86,10 +107,10 @@ function ShopingCart(props) {
                                         <span className="trash">Edit item</span>
                                     </div>
                                     <div className="button-spacer">
-                                        <a className="remove-btn" onClick={() => removeProduct(item)}>
+                                        <Anchor classValue="remove-btn" onChange={() => removeProduct(item)}>
                                             <Icon name="trash2"> </Icon>
                                             <span className="trash">Remove</span>
-                                        </a>
+                                        </Anchor>
                                     </div>
                                     <div className="button-spacer">
                                         <Icon name="hurt"> </Icon>

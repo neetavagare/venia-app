@@ -16,7 +16,7 @@ function App() {
       <HashRouter>
         <MobileHeader />
         <Header />
-        <ToastMessage time={8000}></ToastMessage>
+        <ToastMessage time={2000}></ToastMessage>
         <Routes>
           <Route exact path="/" element={<ProductCatagory />} />
           <Route exact path="/cart" element={<ShopingCart />} />

@@ -289,16 +289,24 @@ export const ColorFilter = [
 export const APIBASE_URL = 'https://fakestoreapi.com';
 export const CART_LOCAL_STORAGE_VALUE = "cartsData";
 export const CART_EMPTY_MESSAGE = " Cart is empty. Please add product to cart. ";
+export const CART_CHANGE_MESSAGE = "Updated Cart";
+export const LAST_CHANGE_MESSAGE = "Should not remove last quantity.";
+export const PRODUCT_ALREADY_EXITS = "Product is already available in Cart.";
+export const ADDED_PRODUCT_TO_BAG_MESSAGE = "Added Product To Bag";
 
 export const DropDownOptions = [
     //Header Texts
+    {
+        value: "",
+        name: "Select"
+    },
     {
         value: "0",
         name: "Sort by Price High to Low"
     },
     {
         value: "1",
-        name: "Sort Price By Low to High"
+        name: "Sort by Price Low to High"
     },
     {
         value: "women's clothing",
