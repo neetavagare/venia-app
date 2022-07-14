@@ -12,6 +12,7 @@ In the project directory, you can run:
 4. Redux
 5. Loader
 6. Add to Cart
+7. Sorting By Price as high and low
 7. Cart Listing
 8. Remove Cart (Note : Only remove cart button is implemented on the Cart Page other buttons are not clickable)
 9. Price Summary 
