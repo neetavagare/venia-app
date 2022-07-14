@@ -11,17 +11,17 @@ function MobileHeader(props) {
 
     return (
         <header className='aem-Grid aem-Grid--4  aem-GridColumn--tablet--12 deskTopHide mobileheader'>
-            <div className="aem-GridColumn aem-GridColumn--phone--1 menu">
-                <Anchor><Icon name="menu" className="menu"> </Icon></Anchor>
-            </div>
-            <div className="aem-GridColumn aem-GridColumn--phone--2">
-                <Link to={"/"}><Anchor><Image alt={""} url={DesktopBanner} ></Image></Anchor></Link>
-            </div>
-            <div className="aem-GridColumn aem-GridColumn--phone--1 mobileIcon">
-                <Anchor><Icon name="Search" className="searchIcon"></Icon></Anchor>
-                <Link to={"/cart"} className="shopbagicon"><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span>  </Link>
+                <div className="aem-GridColumn aem-GridColumn--phone--1 menu">
+                    <Anchor><Icon name="menu" className="menu"> </Icon></Anchor>
+                </div>
+                <div className="aem-GridColumn aem-GridColumn--phone--2">
+                    <Link to={"/"}><Anchor><Image alt={""} url={DesktopBanner} ></Image></Anchor></Link>
+                </div>
+                <div className="aem-GridColumn aem-GridColumn--phone--1 mobileIcon">
+                    <Anchor><Icon name="Search" className="searchIcon"></Icon></Anchor>
+                    <Link to={"/cart"} className="shopbagicon"><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span>  </Link>
 
-            </div>
+                </div>
         </header>
     )
 }

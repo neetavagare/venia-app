@@ -161,7 +161,7 @@ function ProductDetails(props) {
             </div>
             <div className="aem-Grid aem-Grid--12">
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 productdescribe">
-                    <h2 className="hoodie mobile-text-align-center">{props.productData.title}</h2>
+                    <h3 className="hoodie mobile-text-align-center">{props.productData.title}</h3>
                     <div className="description mobile-text-align-center">Description</div>
                     <Paragraph classValue="describe"
                         name={props.productData.description} >

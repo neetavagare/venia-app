@@ -24,6 +24,7 @@ function Header(props) {
     // Header Of all Pages Banner row.
     return (
         <header className='aem-Grid aem-Grid--12 headerborder mobileHide'>
+            {/* <nav role="navigation"> */}
             <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
                 <Link to={"/"}  ><Anchor tabindex=""><Image alt={"Venia APP"} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
             </div>
@@ -37,7 +38,7 @@ function Header(props) {
                 </ul>
             </div>
             <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
-                <ul>
+                <ul >
                     <li><Anchor> <Icon name="Search"> </Icon></Anchor></li>
                     <li><Anchor><Label name="Search" className="text5"></Label></Anchor></li>
                     <li><Anchor><Icon name="User" /></Anchor></li>
@@ -46,6 +47,7 @@ function Header(props) {
 
                 </ul>
             </div>
+            {/* </nav> */}
         </header>
 
     )

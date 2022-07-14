@@ -5,10 +5,10 @@ export default function DropDown(props) {
     let classNm = props.classValue ? props.classValue : ""
 
     return (
-        <select className={classNm} onChange={props.onChange}>
+        <select className={classNm} onChange={props.onChange} aria-label="Select Box">
             {
-                props.options.map((item,index) => {
-                    return <option key={"in"+index}  value={item.value}> {item.name} </option>
+                props.options.map((item, index) => {
+                    return <option key={"in" + index} value={item.value}> {item.name} </option>
                 })
             }
 
