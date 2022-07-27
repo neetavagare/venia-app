@@ -3,10 +3,10 @@ import '../../../scss/main.scss';
 
 // Shopping Bag Banner Component.
 
-function Banner() {
+function Banner(props) {
   return (
-    <section >
-      <h1 className="banner">Your Shopping Bag</h1>
+    <section>
+      <h1 className="banner"> {props.text}</h1>
       <div className="dotborder"></div>
     </section>
   )

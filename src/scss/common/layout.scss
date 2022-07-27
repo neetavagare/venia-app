@@ -2,11 +2,21 @@
 @import '../partials/variables.scss';
 
 body {
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     @include layout;
+}
+
+.page-container {
+    @include layout;
+}
+
+.product-container {
+    padding-left: 190px;
+    padding-right: 190px;
 }
 
 .boximage {
@@ -53,9 +63,16 @@ body {
         padding-left: 0;
     }
 
+    .product-container,
     .container {
-        padding: 0px 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-container,
+    .page-container {
+        margin: 0 10px;
+        padding: 0;
     }
 
     .precaution {
@@ -84,34 +101,28 @@ body {
 
     .mobileheader {
         @include headfootborder;
-        background: #fff 0 0 no-repeat padding-box;
+        background: $primary-brand 0 0 no-repeat padding-box;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 100;
+        display: flex;
+        align-items: center;
+        height: 50px;
 
-        .mobileIcon {
-            margin-top: 15px;
+        .align-center {
+            text-align: center;
         }
 
         .menu {
-            padding-top: 17px;
             padding-left: 10px;
         }
 
-        .searchIcon {
-            padding-top: 20px;
+        .mobilevenia {
+            @include venialogo;
+            text-decoration: none;
+            color: $white-color;
         }
-
-        .searchI {
-            margin-right: 25px;
-        }
-
-    }
-
-    .image {
-        height: 120px;
-        width: 100%;
     }
 
     .button {
@@ -132,10 +143,14 @@ body {
         .paddingTop15 {
             padding-right: 0px;
         }
-    }
 
-    .shopbagicon {
-        text-decoration: none;
+        .quanrbtn {
+            width: 149px;
+        }
+
+        .shopbagicon {
+            text-decoration: none;
+        }
     }
 
     .results {
@@ -194,6 +209,40 @@ body {
 
             }
 
+        }
+    }
+
+    .home-product-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .adventure-img{
+        flex-direction: column;
+        padding: 0 !important;
+    }
+    .home-container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .take-of-section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .adventure-container{
+        flex-direction: column;
+        padding: 0;        
+    }
+    .adventure-content{
+        width: 84% !important;
+        margin-top: -30px;
+    }
+    .location-icon-container{
+        margin-left: 11% !important;
+    }
+    .adventure-sub-content {
+        .hide{
+            display: none;
         }
     }
 }

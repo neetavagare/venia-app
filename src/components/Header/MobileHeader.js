@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "../atoms/Icon/Icon";
 import DesktopBanner from '../../images/Product_Images/DesktopBanner.png';
 import { Link } from 'react-router-dom';
-import { Image } from "../atoms";
+import { Image, Label } from "../atoms";
 import { Anchor } from '../atoms';
 import { connect } from "react-redux";
 
@@ -14,11 +14,10 @@ function MobileHeader(props) {
                 <div className="aem-GridColumn aem-GridColumn--phone--1 menu">
                     <Anchor><Icon name="menu" className="menu"> </Icon></Anchor>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--phone--2">
-                    <Link to={"/"}><Anchor><Image alt={""} url={DesktopBanner} ></Image></Anchor></Link>
+                <div className="aem-GridColumn aem-GridColumn--phone--2 align-center">
+                    <Link to={"/"} className="mobilevenia"><Label name="venia"></Label></Link>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--phone--1 mobileIcon">
-                    <Anchor><Icon name="Search" className="searchIcon"></Icon></Anchor>
+                <div className="aem-GridColumn aem-GridColumn--phone--1 mobileIcon align-center">
                     <Link to={"/cart"} className="shopbagicon"><Anchor><Icon name="ShopBag"> </Icon></Anchor> <span className='cart-count'> {props.carts.length}</span>  </Link>
 
                 </div>

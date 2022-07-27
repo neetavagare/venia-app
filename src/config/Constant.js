@@ -1,3 +1,9 @@
+import women from '../images/Product_Images/women.png';
+import mens from '../images/Product_Images/mens.png';
+import electronics from '../images/Product_Images/electronics.png';
+import jewellery from '../images/Product_Images/jewellery.png';
+
+
 export const HeaderLabels = {
     //Header Texts
     manuItems: [
@@ -71,49 +77,49 @@ export const RecentViewdata = [
         imageUrl: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
         title: 'Mens Cotton Jacket',
         price: '37.00',
-        id : 3
+        id: 3
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
         title: 'MBJ Women Solid',
         price: '70.00',
-        id : 18
+        id: 18
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
         title: ' Mens Casual Slim',
         price: '90.00',
-        id : 4
+        id: 4
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg',
         title: 'Women T-shirt',
         price: '120.00',
-        id : 19
+        id: 19
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
         title: ' John Hardy Women',
         price: '200.00',
-        id : 5
+        id: 5
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg',
         title: 'Silver Ring',
         price: '90.00',
-        id : 7
+        id: 7
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg',
         title: 'Acer LED',
         price: '200.00',
-        id : 13,
+        id: 13,
     },
     {
         imageUrl: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
         title: 'Men T-shirt',
         price: '140.00',
-        id : 2,
+        id: 2,
     }
 ]
 
@@ -294,6 +300,26 @@ export const ColorFilter = [
         text: '#EB7327'
     }
 ]
+
+export const CategoriesFilter = [{
+    text: 'jewellery',
+
+},
+{
+    text: 'Electronics',
+
+},
+{
+    text: 'Men`s Clothing',
+
+}
+    ,
+{
+    text: 'Women`s Clothing',
+
+}
+];
+
 export const APIBASE_URL = 'https://fakestoreapi.com';
 export const CART_LOCAL_STORAGE_VALUE = "cartsData";
 export const CART_EMPTY_MESSAGE = " Cart is empty. Please add product to cart. ";
@@ -302,6 +328,45 @@ export const LAST_CHANGE_MESSAGE = "Should not remove last quantity.";
 export const PRODUCT_ALREADY_EXITS = "Product is already available in Cart.";
 export const ADDED_PRODUCT_TO_BAG_MESSAGE = "Added Product To Bag";
 export const REMOVED_PRODUCT_FROM_BAG_MESSAGE = "Removed Product from Bag";
+
+export const DropDownOption = [
+    {
+        value: "1",
+        name: "United States"
+    },
+    {
+        value: "2",
+        name: "India"
+    },
+    {
+        value: "3",
+        name: "japan"
+    },
+    {
+        value: "4",
+        name: "Dubai"
+    },
+
+] 
+ 
+export const StateOption = [
+        {
+            value: "1",
+            name: "California"
+        },
+        {
+            value: "2",
+            name: "Texas"
+        },
+        {
+            value: "3",
+            name: "Florida"
+        },
+        {
+            value: "4",
+            name: "Alaska"
+        },
+]
 
 export const DropDownOptions = [
     //Header Texts
@@ -333,6 +398,87 @@ export const DropDownOptions = [
         value: "electronics",
         name: "Electronics"
     },
-
-
 ]
+
+export const FooterContentData = [
+    {
+        name: "About Us",
+        contents: [
+            {
+                name: "Our Story"
+            },
+            {
+                name: "Our Story"
+            }
+        ]
+    },
+    {
+        name: "Account",
+        contents: [
+            {
+                name: "Sign in"
+            },
+            {
+                name: "Register"
+            }
+            ,
+            {
+                name: "Order Status"
+            }
+        ]
+    },
+    {
+        name: "Help",
+        contents: [
+            {
+                name: "Contact Us"
+            },
+            {
+                name: "Order Status"
+            }
+            ,
+            {
+                name: "Returns"
+            }
+        ]
+    }
+    ,
+    {
+        name: "Follow Us!",
+        contents: [
+            {
+                name: "Lorem ipsum dolor sit"
+            },
+            {
+                name: "consectetur adipiscing elit"
+            }
+            ,
+            {
+                name: "sed do eiusmod"
+            }
+        ]
+    }
+];
+
+
+export const HomePageCategoryData=[{
+    id:"Women",
+    img:women,
+    name:"Shop Women",
+    description:"Lorem ipsum dolor sit amet",
+},{
+    id:"men",
+    img:mens,
+    name:"Shop Men",
+    description:"Lorem ipsum dolor sit amet",
+},{
+    id:"jwellery",
+    img:jewellery,
+    name:"Jwellery",
+    description:"Lorem ipsum dolor sit amet",
+},{
+    id:"electronics",
+    img:electronics,
+    name:"Electronics",
+    description:"Lorem ipsum dolor sit amet",
+}]   

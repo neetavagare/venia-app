@@ -24,7 +24,7 @@
         .catagory3 {
             @include size;
             @include cursor;
-            color: $grey-dark;
+            color: $Grey-color;
         }
     }
 
@@ -79,26 +79,7 @@
         @include boldFont
     }
 
-    .swatch1 {
-        @include radius;
-        background-color: $darkBlue-color;
-    }
-
-    .swatch2 {
-        @include radius;
-        background-color: $darkPink-color;
-    }
-
-    .swatch3 {
-        @include radius;
-        background-color: $darkBlack-color;
-    }
-
-    .swatch4 {
-        @include radius;
-        background-color: $lightGrey;
-    }
-
+    
     .detailsize {
         @include ptitle;
         font-size: 20px;
@@ -115,6 +96,7 @@
     }
 
     .quanrbtn {
+        border: 2px solid $grey-M1-color;
         border-radius: 8px;
         width: 114px;
         height: 36px;
@@ -126,10 +108,10 @@
 
     .addbtn {
         background-color: $primary-brand;
-        border-radius: 28px;
         color: $white-color;
-        width: 318px;
-        height: 40px;
+        border: none;
+        width: 280px;
+        height: 35px;
         text-align: center;
         margin-bottom: 15px;
         text-transform: uppercase;
@@ -189,9 +171,7 @@
     }
 
     .sectionender {
-        background-color: $primary-brand;
-        height: 8px;
-        width: 102px;
+        @include section-ender;
     }
 }
 

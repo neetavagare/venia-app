@@ -3,7 +3,7 @@ import { Anchor, Label } from '../../atoms';
 
 export default function CategoryLabel() {
     return (
-        <div style={{ paddingLeft: 10 }}>
+        <div>
             <Anchor classValue="cursor-pointer"><Label name="Clothing" className="catagory1">
             </Label>/</Anchor>
             <Anchor classValue="cursor-pointer"><Label name="Women's" className="catagory2">

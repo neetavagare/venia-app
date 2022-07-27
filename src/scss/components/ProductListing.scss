@@ -41,15 +41,13 @@
 .productItem {
     @include ptitle;
     text-align: -webkit-center;
+    margin-left: 10px;
+    margin-right: 10px;
 
     .productMainImage {
         text-align: center;
         position: relative;
         border: 0.5px solid $greyL2-color;
-        // height: 230px;
-        // width: 80%;
-        margin-left: 10px;
-        margin-right: 10px;
 
         img {
             position: absolute;
@@ -72,6 +70,7 @@
 
     .producttitle {
         margin: 0;
+        text-align: left;
         font-weight: bold;
         padding-top: 8px;
         padding-bottom: 5px;
@@ -86,9 +85,11 @@
 
     .productprice {
         padding-bottom: 8px;
+        text-align: left;
     }
 
     .ProductIcon {
+        text-align: left;
         padding-top: 10px;
         padding-bottom: 20px;
     }
@@ -126,8 +127,6 @@
     .filtertitle {
         font-size: 16px;
         font-weight: bolder;
-        // padding-top: 25px;
-        padding-bottom: 15px;
     }
 
     .filteroption {
@@ -155,35 +154,34 @@
     }
 
     .filterborder {
-        @include filterborder;
+        margin-top: 20px;
+        margin-right: 45px;
+        border-top: 1px solid $greyL2-color;
     }
 }
 
 .boximg {
-    margin-top: 25px;
     display: flex;
 
     .black-image-div {
         display: flex;
         align-items: center;
         background: $unnamed-color;
+
     }
 
     .categoryBorder {
-        border-bottom: 5px solid $darkBlue-color;
-        width: 26%;
+        border-bottom: 5px solid $primary-brand;
+        width: 30%;
         text-align: center;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
     .colorbox {
-        // width: 73%;
-        // height: 141px;
         width: 100%;
         text-align: center;
-        // padding-top: 117px;
-        // padding-left: 128px;
+        padding: 24px;
         font-size: 40px;
         background-color: $unnamed-color;
         color: $white-color;
@@ -192,6 +190,7 @@
 
     .Bannerimg {
         width: 100%;
+        padding-top: 10px;
     }
 
     .mobileimg {

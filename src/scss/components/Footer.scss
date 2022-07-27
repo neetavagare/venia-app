@@ -39,6 +39,11 @@
     display: flex;
     align-items: center;
 
+    .footervenia {
+        @include venialogo;
+        color: $greyD2-color;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -74,7 +79,7 @@
         }
     }
 
-    .footerColor{
+    .footerColor {
         color: $grey-dark;
 
     }

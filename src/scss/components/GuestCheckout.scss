@@ -1,0 +1,277 @@
+@import '../common/extend.scss';
+@import '../common/layout.scss';
+@import '../common//mixin.scss';
+@import '../partials/variables.scss';
+
+.checkout {
+    .checkout-header {
+        @extend .semiboldsource-family;
+        @extend .fontsize-header;
+        text-align: center;
+    }
+
+    .sectionstart {
+        @include section-ender;
+
+    }
+}
+
+.field {
+
+    .country-dropdown,
+    .email {
+        @include input;
+    }
+
+    .contact-text {
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 12px 0;
+    }
+
+    .delivery-text {
+        @include ptitle;
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+
+    .text-shipping {
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+
+    .country-dropdown {
+        @extend .semiboldmuli-family;
+        font-size: 14px;
+    }
+
+    .label {
+        margin-bottom: 5px;
+    }
+
+    .checkoutend {
+        @include field-spacing;
+        display: block;
+    }
+
+
+    .address-section {
+        @include field-spacing;
+    }
+
+    .name-section {
+        @include field-spacing;
+
+        .fname {
+            @include input;
+
+        }
+    }
+
+    .state-dropdown {
+        border: 2px solid $greyL2-color;
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .zip {
+        @include input;
+        width: 60%;
+        height: 35px;
+        margin-left: 15px;
+    }
+
+}
+
+.next-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.continue-btn {
+    @include continuebtn-checkout;
+}
+
+.sign-Section {
+    @include ptitle;
+    border: 1px solid $border-color;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+
+    .signin-text {
+        font-size: 20px;
+        @extend .semiboldmuli-family;
+    }
+
+    .sign-in {
+        border: 2px solid $primary-brand;
+        text-transform: uppercase;
+        font-size: 14px;
+        background-color: $white-color;
+        color: $primary-brand;
+        padding: 9px 40px;
+    }
+
+}
+
+.label {
+    @extend .semiboldmuli-family;
+    @extend .regularsize;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.payment-section {
+    .shipping-btn {
+        display: flex;
+        justify-content: center;
+
+        .payment-btn {
+            @include continuebtn-checkout;
+            margin-top: 40px;
+        }
+    }
+
+    .radio-paypal {
+        @extend .regularsize;
+        @extend .muliregular-family;
+    }
+
+    .myCheck {
+        @include field-margin;
+        margin-top: 20px;
+        width: 17px;
+        height: 13px;
+    }
+
+    .shipping-tag {
+        @include field-padding;
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .info-text {
+        @extend .semiboldmuli-family;
+        @extend .regularsize;
+        margin: 20px 20px;
+    }
+
+    .field {
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        width: 320px;
+        height: 34px;
+        margin-bottom: 20px;
+    }
+
+    .credit-radio {
+        @include field-padding;
+
+        .radio {
+            margin: 0
+        }
+
+        .radio-card {
+            @extend .regularsize;
+            @extend .muliregular-family;
+            padding-left: 5px
+        }
+    }
+
+    .end-field {
+        display: flex;
+
+        .date-field {
+            @include input;
+            width: 190px;
+        }
+
+        .cvv-field {
+            @include input;
+            margin-left: 20px;
+            width: 35%;
+        }
+    }
+}
+
+.shipping-section {
+
+    .shipping-tag {
+        @include field-padding;
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .info-text {
+        @extend .semiboldmuli-family;
+        @extend .regularsize;
+        margin: 20px 20px;
+    }
+
+    .radio-one {
+        margin-bottom: 15px;
+
+        .radiotext-one {
+            @include radio-section;
+        }
+    }
+
+    .radio-two {
+        margin-bottom: 15px;
+
+        .radiotext-two {
+            @include radio-section;
+        }
+    }
+
+    .radio-three {
+        margin-bottom: 15px;
+
+        .radiotext-three {
+            @include radio-section;
+        }
+    }
+
+    .shipping-btn {
+        display: flex;
+        justify-content: center;
+
+        .payment-btn {
+            @include continuebtn-checkout;
+            margin-top: 40px;
+        }
+    }
+}
+
+.guest-check {
+    @extend .semiboldmuli-family;
+    @extend .fontsize-Subheader;
+    margin: 15px 0;
+}
+
+.field-details {
+    @include field-box;
+}
+
+.field-edit {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+
+    .text-edit {
+        @extend .semiboldmuli-family;
+        @extend .regularsize;
+        color: $primary-brand;
+        margin: 0;
+    }
+
+    .edit-2 {
+        padding-right: 10px;
+    }
+}

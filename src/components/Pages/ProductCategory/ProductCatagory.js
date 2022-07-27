@@ -7,6 +7,8 @@ import Loader from "../../atoms/Loader/Loader";
 import Pagination from "./Pegination";
 import Helper from "../../../helper/Helper";
 
+import boys from '../../../images/Product_Images/boys.png';
+import { Image } from "../../atoms";
 
 
 function ProductCatagory(props) {
@@ -71,14 +73,38 @@ function ProductCatagory(props) {
 
 
   return <React.Fragment>
-    <Loader isLoading={props.isLoading}></Loader>
-    <ProductListing data={data} sortByCategory={sortByCategory}></ProductListing>
-    {
-      showPagination &&
-      <Pagination totalItem={totalItem} paginate={paginate}></Pagination>
+    <div className="aem-Grid aem-Grid--12">
+      <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--4 boximg">
+        <div className="deskTopHide">
+          <div>
+            <Image alt={""} url={boys} classValue="mobileimg"></Image>
+          </div>
+          <div className="blackbox">
+            <div>Mens's Outerwear</div>
+            <div className="categoryBorder">
+            </div>
+          </div>
+        </div>
+        <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 mobileHide black-image-div">
+          <div className="colorbox">
+            <div>Mens's Outerwear</div>
+            <div className="categoryBorder"></div>
+          </div>
+        </div>
+        <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12 mobileHide">
+          <Image alt={""} url={boys} classValue="Bannerimg"></Image>
+        </div>
+      </div>
+    </div>
+    <div className="page-container">
+      <Loader isLoading={props.isLoading}></Loader>
+      <ProductListing data={data} sortByCategory={sortByCategory}></ProductListing>
+      {
+        showPagination &&
+        <Pagination totalItem={totalItem} paginate={paginate}></Pagination>
 
-    }
-
+      }
+    </div>
   </React.Fragment>
 }
 

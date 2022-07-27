@@ -2,22 +2,32 @@
 @import '../common/layout.scss';
 @import '../common/mixin.scss';
 
-.headerborder {
-    @include headfootborder;
+.container-header {
+    background-color: $primary-brand;
+}
+
+.max-width-header {
+    color: $white-color;
     padding-bottom: 5px;
-    background: #fff 0 0 no-repeat padding-box;
-    border-bottom: 1px solid $greyL1-color;
     margin: 0 auto;
     max-width: 100%;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 100;
-
 }
 
 .venia {
-    width: 42%;
+    padding-top: 12px;
+
+    .decorationNone {
+        color: $white-color;
+    }
+
+    .logo {
+        @include venialogo;
+        margin-top: 20px;
+    }
 }
 
 //  Header Labels sass
@@ -26,7 +36,7 @@
     font-family: Mulish;
     display: flex;
     justify-content: center;
-    padding-top: 16px;
+    padding-top: 14px;
     font-size: 16px;
 
     ul {
@@ -88,7 +98,7 @@
 .cart-count {
     width: 20px;
     position: absolute;
-    background: blue;
+    background: $primary-M1;
     height: 20px;
     text-align: center;
     color: white;

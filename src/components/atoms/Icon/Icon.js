@@ -12,8 +12,8 @@ export default function Icon(props) {
                 <span className='searchI'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 26.414 26.414" role={"img"}>
                         <g id="search" transform="translate(-2 -2)">
-                            <circle id="Ellipse_153" data-name="Ellipse 153" cx="11" cy="11" r="11" transform="translate(3 3)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_547" data-name="Line 547" x1="4.35" y1="4.35" transform="translate(22.65 22.65)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <circle id="Ellipse_153" data-name="Ellipse 153" cx="11" cy="11" r="11" transform="translate(3 3)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_547" data-name="Line 547" x1="4.35" y1="4.35" transform="translate(22.65 22.65)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>
@@ -24,8 +24,8 @@ export default function Icon(props) {
                 <span className='user'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23.333 24" role={"img"}>
                         <g id="user" transform="translate(-3 -2)">
-                            <path id="Path_38138" data-name="Path 38138" d="M25.333,23V20.333A5.333,5.333,0,0,0,20,15H9.333A5.333,5.333,0,0,0,4,20.333V23" transform="translate(0 2)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <circle id="Ellipse_176" data-name="Ellipse 176" cx="5" cy="5" r="5" transform="translate(9.333 3)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <path id="Path_38138" data-name="Path 38138" d="M25.333,23V20.333A5.333,5.333,0,0,0,20,15H9.333A5.333,5.333,0,0,0,4,20.333V23" transform="translate(0 2)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <circle id="Ellipse_176" data-name="Ellipse 176" cx="5" cy="5" r="5" transform="translate(9.333 3)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>
@@ -35,9 +35,9 @@ export default function Icon(props) {
                 <span className='shoppingbag'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 22" role={"img"}>
                         <g id="shopping-bag" transform="translate(-2 -1)">
-                            <path id="Path_38093" data-name="Path 38093" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_555" data-name="Line 555" x2="18" transform="translate(3 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <path id="Path_38094" data-name="Path 38094" d="M16,10a4,4,0,0,1-8,0" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <path id="Path_38093" data-name="Path 38093" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_555" data-name="Line 555" x2="18" transform="translate(3 6)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <path id="Path_38094" data-name="Path 38094" d="M16,10a4,4,0,0,1-8,0" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>
@@ -46,8 +46,8 @@ export default function Icon(props) {
                 <span className='circle'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" role={"img"}>
                         <g id="minus-circle" transform="translate(-1 -1)">
-                            <circle id="Ellipse_134" data-name="Ellipse 134" cx="10" cy="10" r="10" transform="translate(2 2)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_520" data-name="Line 520" x2="8" transform="translate(8 12)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <circle id="Ellipse_134" data-name="Ellipse 134" cx="10" cy="10" r="10" transform="translate(2 2)" fill="none" stroke="#91959C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_520" data-name="Line 520" x2="8" transform="translate(8 12)" fill="none" stroke="#91959C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>
@@ -56,9 +56,9 @@ export default function Icon(props) {
                 <span className='circle'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" role={"img"}>
                         <g id="plus-circle" transform="translate(-1 -1)">
-                            <circle id="Ellipse_148" data-name="Ellipse 148" cx="10" cy="10" r="10" transform="translate(2 2)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_537" data-name="Line 537" y2="8" transform="translate(12 8)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_538" data-name="Line 538" x2="8" transform="translate(8 12)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <circle id="Ellipse_148" data-name="Ellipse 148" cx="10" cy="10" r="10" transform="translate(2 2)" fill="none" stroke="#91959C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_537" data-name="Line 537" y2="8" transform="translate(12 8)" fill="none" stroke="#91959C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_538" data-name="Line 538" x2="8" transform="translate(8 12)" fill="none" stroke="#91959C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>
@@ -91,7 +91,7 @@ export default function Icon(props) {
             }
             {labelName === 'downarrow' &&
                 <span className='downarrow'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="8.414" viewBox="0 0 14.828 8.414"  role={"img"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="8.414" viewBox="0 0 14.828 8.414" role={"img"}>
                         <path id="chevron-down" d="M6,9l6,6,6-6" transform="translate(-4.586 -7.586)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                     </svg>
                 </span>
@@ -133,7 +133,7 @@ export default function Icon(props) {
             }
             {labelName === 'square' &&
                 <spna className='square'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" className='square' role={"img"}> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" className='square' role={"img"}>
                         <rect id="square" width="18" height="18" rx="2" transform="translate(1 1)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                     </svg>
                 </spna>
@@ -174,9 +174,9 @@ export default function Icon(props) {
                 <span className='menu'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" role={"img"}>
                         <g id="menu" transform="translate(-2 -5)">
-                            <line id="Line_510" data-name="Line 510" x2="18" transform="translate(3 12)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_511" data-name="Line 511" x2="18" transform="translate(3 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <line id="Line_512" data-name="Line 512" x2="18" transform="translate(3 18)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_510" data-name="Line 510" x2="18" transform="translate(3 12)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_511" data-name="Line 511" x2="18" transform="translate(3 6)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_512" data-name="Line 512" x2="18" transform="translate(3 18)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
                 </span>
@@ -225,6 +225,13 @@ export default function Icon(props) {
                             <line id="Line_624" data-name="Line 624" x1="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                             <line id="Line_625" data-name="Line 625" x2="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
+                    </svg>
+                </span>
+            }
+            {labelName === 'Edit-2' &&
+                <span className='edit-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path id="edit-2" d="M14.1,2.84a2.282,2.282,0,0,1,3.228,3.228L6.438,16.961,2,18.172l1.21-4.438Z" transform="translate(-1 -1.172)" fill="none" stroke="#e26a2c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                     </svg>
                 </span>
             }

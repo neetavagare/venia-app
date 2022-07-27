@@ -15,27 +15,7 @@ export default function ProductListing(props) {
         // Product Listing Component Page
         <section>
             <div className="aem-Grid aem-Grid--12">
-                <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--4 boximg">
-                    <div className="deskTopHide">
-                        <div>
-                            <Image alt={""} url={Banner} classValue="mobileimg"></Image>
-                        </div>
-                        <div className="blackbox">
-                            <div>Women's Outerwear </div>
-                            <div className="categoryBorder">
-                            </div>
-                        </div>
-                    </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12 mobileHide black-image-div">
-                        <div className="colorbox">
-                            <div>Women’s</div>
-                            <div className="categoryBorder"></div>
-                        </div>
-                    </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12 mobileHide">
-                        <Image alt={""} url={Banner} classValue="Bannerimg"></Image>
-                    </div>
-                </div>
+
                 <div className="aem-Grid aem-Grid--12 deskTopHide catagories">
                     <CategoryLabel></CategoryLabel>
                 </div>
@@ -74,7 +54,7 @@ export default function ProductListing(props) {
 
                 <div className="aem-GridColumn aem-GridColumn--default--3 productFilters mobileHide">
                     <div className="filtertitle">Filters</div>
-                    <div className="filter">Size</div>
+                    <div className="filter">Categories</div>
                     <div className="aem-Grid aem-Grid--3">
                         <FiltersComponent></FiltersComponent>
                     </div>
@@ -86,7 +66,7 @@ export default function ProductListing(props) {
 
                     <div className="aem-Grid aem-Grid--12">
                         {
-                            props.data && props.data.map((item,index) => {
+                            props.data && props.data.map((item, index) => {
                                 return <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6" key={item.id}>
                                     <ProductItem item={item} index={index}></ProductItem>
                                 </div>

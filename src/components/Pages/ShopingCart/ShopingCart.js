@@ -62,9 +62,9 @@ function ShopingCart(props) {
 
 
     return (
-        <section>
+        <section className="page-container">
             <Loader isLoading={props.isLoading}></Loader>
-            <Banner />
+            <Banner text={"Your Shopping Bag"}/>
 
             {/* Cart Page If we add item It will shown on cart page. */}
 
@@ -137,7 +137,7 @@ function ShopingCart(props) {
                 {/* Pricing summery tabel Component */}
 
                 <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 pricingSection">
-                    <PricingSummery totalPrice={totalPrice}> </PricingSummery>
+                    <PricingSummery totalPrice={totalPrice} isHide={true}> </PricingSummery>
                 </div>
             </div>
 

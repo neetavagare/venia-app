@@ -23,32 +23,29 @@ function Header(props) {
 
     // Header Of all Pages Banner row.
     return (
-        <header className='aem-Grid aem-Grid--12 headerborder mobileHide'>
-            {/* <nav role="navigation"> */}
-            <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
-                <Link to={"/"}  ><Anchor tabindex=""><Image alt={"Venia APP"} url={DesktopBanner} classValue="venia"></Image></Anchor></Link>
-            </div>
-            <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
-                <ul>
-                    {
-                        HeaderLabels.manuItems.map((item) => {
-                            return <li><Link className="decorationNone cursor-pointer" to={"/"} ><Label key={item.label} name={item.label} classValue={item.className}></Label></Link></li>
-                        })
-                    }
-                </ul>
-            </div>
-            <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
-                <ul >
-                    <li><Anchor> <Icon name="Search"> </Icon></Anchor></li>
-                    <li><Anchor><Label name="Search" className="text5"></Label></Anchor></li>
-                    <li><Anchor><Icon name="User" /></Anchor></li>
-                    <li><span><Anchor><Label name="Sign in" className="text6"></Label></Anchor> </span></li>
-                    <li><Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor><span className='cart-count'> {props.carts.length}</span></Link></li>
+        <div className='container container-header'>
+            <header className='aem-Grid aem-Grid--12 max-width-header mobileHide '>
+                {/* <nav role="navigation"> */}
+                <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
+                <Link className="decorationNone cursor-pointer" to={"/"} ><Label name="venia" className="logo"></Label></Link>
+                </div>
+                <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
+                    <ul>
+                        {
+                            HeaderLabels.manuItems.map((item) => {
+                                return <li><Link className="decorationNone cursor-pointer" to={"/category"} ><Label key={item.label} name={item.label} classValue={item.className}></Label></Link></li>
+                            })
+                        }
+                    </ul>
+                </div>
+                <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
+                    <ul >
+                        <li><Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor><span className='cart-count'> {props.carts.length}</span></Link></li>
 
-                </ul>
-            </div>
-            {/* </nav> */}
-        </header>
+                    </ul>
+                </div>
+            </header>
+        </div>
 
     )
 }

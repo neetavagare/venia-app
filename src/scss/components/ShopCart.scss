@@ -7,17 +7,21 @@
     .img_box img {
         width: 90%;
     }
-    .button-spacer{
+
+    .button-spacer {
         margin-top: 5px;
         margin-left: 50px;
     }
-    .remove-btn{
+
+    .remove-btn {
         cursor: pointer;
     }
+
     .details {
         font-family: Mulish;
         color: $unnamed-color;
-        .title-link{
+
+        .title-link {
             text-decoration: none;
         }
 
@@ -73,8 +77,10 @@
 }
 
 .pricingSection {
-    border: 1px solid $border-color;
-    padding: 20px 10px;
+    border: 1px solid $white-color;
+    border-radius: 2px;
+    box-shadow: 0 0 6px $border-color;
+    padding: 20px;
     @include ptitle;
 
     .pricingtext {
@@ -109,38 +115,40 @@
     .pricing {
         text-align: end;
     }
-    .textAlignCenter{
+
+    .textAlignCenter {
         @include textCenter;
     }
-    .lock{
-        color: $white-color; 
-      }
-      
-      .checkoutbtn {
-          margin-top: 10px;
-          text-align: center;
-          color: $white-color;
-          text-transform: uppercase;
-          font-size: 14px;
-          padding: 8px;
-          width: 80%;
-          @include cursor;
-          border: none;
-          border-radius: 28px;
-          background-color: $primary-brand;
-      }
-      
-      .paypal-exp{
-          margin-top: 20px;
-          width: 80%;
-          border: none;
-          padding: 0;
-          background: transparent;
-          @include cursor;  
-          .paypalbtn{
+
+    .lock {
+        color: $white-color;
+    }
+
+    .checkoutbtn {
+        margin-top: 10px;
+        text-align: center;
+        color: $white-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 8px;
+        width: 80%;
+        @include cursor;
+        border: none;
+        border-radius: 28px;
+        background-color: $primary-brand;
+    }
+
+    .paypal-exp {
+        margin-top: 20px;
+        width: 80%;
+        border: none;
+        padding: 0;
+        background: transparent;
+        @include cursor;
+
+        .paypalbtn {
             width: 100%;
-          }
-      }
+        }
+    }
 
 }
-

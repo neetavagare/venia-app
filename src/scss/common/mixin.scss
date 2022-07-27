@@ -1,13 +1,20 @@
 // Header mixin
 
-
 @mixin layout {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+@mixin venialogo {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: mulish;
+    letter-spacing: 4.6px;
+    font-weight: bold;
 }
 
 @mixin headfootborder {
-    border-bottom: 1px solid $greyL2-color;
+    border-bottom: 2px solid $border-color;
 }
 
 @mixin floatright {
@@ -18,7 +25,7 @@
     padding-right: 15px;
     font-size: 16px;
     font-family: Mulish;
-    color: $header-color;
+    color: $white-color;
 }
 
 @mixin textss {
@@ -29,7 +36,8 @@
 }
 
 @mixin size {
-    font-size: 16px;
+    font-size: 14px;
+    font-family: mulish;
 }
 
 @mixin headingsize {
@@ -38,7 +46,7 @@
     font-family: Source Sans Pro, Semibold;
     color: $unnamed-color;
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
 }
 
 
@@ -84,7 +92,7 @@
 @mixin filterborder {
     margin-top: 20px;
     margin-right: 45px;
-    border-top: 2px solid $grey-M1-color;
+    border-top: 2px solid $greyL2-color;
 }
 
 @mixin pricingpadding {
@@ -139,4 +147,88 @@
 
 @mixin textCenter {
     text-align: center;
+}
+
+@mixin hero-catagory {
+    margin-top: -87px !important;
+    margin: auto;
+    padding: 17px;
+    background-color: $title-color;
+    position: relative;
+    width: 83%;
+    border-bottom: 8px solid $primary-brand;
+}
+
+@mixin hero-catagorytext {
+    color: $white-color;
+    font-size: 16px;
+}
+
+@mixin home-shopcatagory {
+    font-family: Source Serif Pro, Semibold;
+    font-size: 24px;
+    color: $white-color;
+    margin: 0;
+}
+
+@mixin home-shopbtn {
+    background-color: $primary-brand;
+    border: 2px solid $primary-brand;
+    color: $white-color;
+    text-transform: uppercase;
+    height: 40px;
+    font-size: 14px;
+    width: 220px;
+}
+
+@mixin section-ender {
+    background-color: $primary-brand;
+    height: 8px;
+    width: 102px;
+}
+
+@mixin input {
+    border: 2px solid $greyL2-color;
+    border-radius: 8px;
+    width: 320px;
+    height: 34px;
+    @extend .semiboldmuli-family;
+    @extend .regularsize;
+}
+
+@mixin field-spacing {
+    margin-top: 30px;
+}
+
+@mixin continuebtn-checkout {
+    width: 347px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $white-color;
+    color: $primary-brand;
+    border: 2px solid $orange-color;
+}
+
+@mixin radio-section {
+    @include size;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+@mixin field-box {
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    width: 695px;
+    height: 176px;
+    margin-bottom: 25px;
+}
+
+@mixin field-padding {
+    padding-bottom: 20px;
+}
+
+@mixin field-margin {
+    margin-bottom: 20px;
 }
